@@ -6,6 +6,7 @@ import $ from 'jquery';
 import Navbar from '../Navbar';
 import Home from '../Home';
 import About from '../About';
+import Blog from '../Blog';
 
 import './style.css';
 
@@ -18,11 +19,11 @@ export default class App extends React.Component {
   /**
    * 
    */
-  handleScrollCallback(){
+  handleScrollCallback() {
     if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
+      $(".navbar-fixed-top").addClass("top-nav-collapse");
     } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+      $(".navbar-fixed-top").removeClass("top-nav-collapse");
     }
   }
 
@@ -34,9 +35,9 @@ export default class App extends React.Component {
 
         <Navbar />
 
-        <div id="Home" >
+        <section id="Home" >
           <Home />
-        </div>
+        </section>
 
         <section id="About" >
           <About />
@@ -50,6 +51,10 @@ export default class App extends React.Component {
               </div>
             </div>
           </div>
+        </section>
+
+        <section id="Blog" >
+          <Blog />
         </section>
 
         <section id="Connect" >
