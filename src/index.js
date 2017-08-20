@@ -12,12 +12,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory } from 'react-router';
 //Import all of our components to configure react-router
-import Main from './components/Main';
+import App from './components/App';
+import NotFound from './components/NotFound';
+import Blog from './components/Blog';
 
 const Routes = (props) => (
   <Router {...props}>
-    <Route path="/" component={Main}>
-    </Route>
+    <Route path="/" component={App} />
+    <Route path="/blog" component={Blog} />
+    <Route path="*" component={NotFound} />
   </Router>
 );
 

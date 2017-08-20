@@ -1,15 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ScrollEvent from 'react-onscroll';
 import $ from 'jquery';
 
 // Child component's to be rendered
 import Navbar from '../Navbar';
 import Home from '../Home';
+import About from '../About';
 
 import './style.css';
 
-export default class Main extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.handleScrollCallback = this.handleScrollCallback.bind(this);
@@ -34,21 +34,15 @@ export default class Main extends React.Component {
 
         <Navbar />
 
-        <div id="Home" className="intro-section">
+        <div id="Home" >
           <Home />
         </div>
 
-        <section id="About" className="about-section">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
-                <h1>About Section</h1>
-              </div>
-            </div>
-          </div>
+        <section id="About" >
+          <About />
         </section>
 
-        <section id="Projects" className="services-section">
+        <section id="Projects" >
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
@@ -58,7 +52,7 @@ export default class Main extends React.Component {
           </div>
         </section>
 
-        <section id="Connect" className="contact-section">
+        <section id="Connect" >
           <div className="container">
             <div className="row">
               <div className="col-lg-12">

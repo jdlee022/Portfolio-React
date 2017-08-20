@@ -24,7 +24,6 @@ export default class Navbar extends React.Component {
   }
 
   collapseNavbar(){
-    console.log("inside collapseNavbar!!!");
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
     } else {
@@ -39,7 +38,7 @@ export default class Navbar extends React.Component {
     );
 
     return (
-      <nav className="navbar navbar-custom navbar-fixed-top" role="navigation" onScroll={this.collapseNavbar}>
+      <nav className="navbar navbar-custom navbar-fixed-top" onScroll={this.collapseNavbar}>
         <div className="container">
           <div className="collapse navbar-collapse navbar-right navbar-main-collapse">
             <ul className="nav navbar-nav">
@@ -52,22 +51,3 @@ export default class Navbar extends React.Component {
     );
   }
 }
-
-// <nav classNameName="navbar navbar-default ">
-//       <div classNameName="container">
-//         <div classNameName="navbar-header page-scroll">
-//           <button type="button" classNameName="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-//             <span classNameName="sr-only">Toggle navigation</span>
-//             <span classNameName="icon-bar"></span>
-//             <span classNameName="icon-bar"></span>
-//             <span classNameName="icon-bar"></span>
-//           </button>
-//         </div>
-
-//         <div classNameName="collapse navbar-collapse navbar-ex1-collapse">
-//           <ul classNameName="nav navbar-nav">
-//             {linkItems}
-//           </ul>
-//         </div>
-//       </div>
-//     </nav>
