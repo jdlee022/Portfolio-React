@@ -1,0 +1,20 @@
+.projects-container p{
+  font-size: 18px;
+}
+.projects-header{
+  padding-bottom: 80px;
+}
+#projects-title{
+  margin-top: 60px;
+  margin-bottom: 25px;
+}
+
+#projects-subtitle{
+  line-height: 25px;
+  font-size: 18px;
+  color: #FFF5CA;
+}
+
+#phil-title:hover{
+  text-decoration: underline;
+}
