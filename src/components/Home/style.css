@@ -1,5 +1,18 @@
 .home-container{
   height: 800px;
+  /* position: absolute; */
+}
+
+#learn-more{
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -30.5px;
+  cursor: pointer;
+}
+
+.subtitle{
+  color:#fff6d8;
 }
 
 .intro {
@@ -36,5 +49,6 @@
   }
   .intro .intro-body .intro-text {
     font-size: 26px;
+    margin-top: 350px;
   }
 }

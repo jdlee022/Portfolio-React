@@ -1,5 +1,15 @@
 .projects-container p{
   font-size: 18px;
+  text-shadow: 0 2px 2px black;
+}
+
+.project-text{
+  padding-left: 5%;
+}
+
+.project-screenshot{
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 .projects-header{
   padding-bottom: 80px;
@@ -15,6 +25,18 @@
   color: #FFF5CA;
 }
 
-#phil-title:hover{
-  text-decoration: underline;
+.synth-lord-link{
+  color: #f68be3;
+}
+
+.synth-lord-link:hover{
+  color: #e963d2;
+}
+
+.scalegenius-link{
+  color: #ffec9e;
+}
+
+.scalegenius-link:hover{
+  color: #ffe46e;
 }

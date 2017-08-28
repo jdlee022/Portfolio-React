@@ -9,19 +9,19 @@ export default class Navbar extends React.Component {
     this.state = {
       links: ["Home", "About", "Projects", "Blog", "Connect"]
     }
-    this.scrollToSection = this.scrollToSection.bind(this);
+    this.scrollToSection = this.props.scrollToSection.bind(this);
     this.collapseNavbar = this.collapseNavbar.bind(this);
   }
 
-  /**
-   * We use jQuery to scroll to an element by id
-   * @param linkName - the id of the element we want to scroll to
-   */
-  scrollToSection(linkName) {
-    $('html, body').animate({
-      scrollTop: $("#" + linkName).offset().top
-    }, 1000);
-  }
+  // /**
+  //  * We use jQuery to scroll to an element by id
+  //  * @param linkName - the id of the element we want to scroll to
+  //  */
+  // scrollToSection(linkName) {
+  //   $('html, body').animate({
+  //     scrollTop: $("#" + linkName).offset().top
+  //   }, 1000);
+  // }
 
   collapseNavbar(){
     if ($(".navbar").offset().top > 50) {
@@ -39,7 +39,7 @@ export default class Navbar extends React.Component {
 
     return (
       <nav className="navbar navbar-custom navbar-fixed-top" onScroll={this.collapseNavbar}>
-        <div className="container">
+        <div className="container-fluid">
           <div className="collapse navbar-collapse navbar-right navbar-main-collapse">
             <ul className="nav navbar-nav">
               {linkItems}
