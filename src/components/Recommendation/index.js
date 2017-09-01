@@ -1,11 +1,19 @@
 import React from "react";
 
-export default class Recommendation extends React.Component{
+import './style.css';
+import felipe from '../utilities/img/felipe.png';
 
-  render(){
+export default class Recommendation extends React.Component {
+
+  render() {
     return (
-      <div className="container">
-        <h1>Recommendation</h1>
+      <div className="container-fluid recommendation-container">
+        <div className="row content">
+          <div className="col-md-8 col-md-offset-2 text-center">
+            <blockquote id="quote">"As one of the top students in the class, Jon demonstrated a firm grasp of programming principles as well as the ability to learn on his own, given a set of tools and a place to start from."</blockquote>
+            <img id="felipe-img" src={felipe} alt="felipe" />
+          </div>
+        </div>
       </div>
     );
   }

@@ -7,7 +7,7 @@ export default class About extends React.Component {
 
   render() {
     return (
-      <div className="container about-container">
+      <div className="container-fluid about-container">
         <div className="row">
           <div className="col-md-6 ">
             <img id="about-pic" src={aboutPic} alt="about pic" />
