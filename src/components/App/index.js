@@ -9,6 +9,7 @@ import Skills from '../Skills';
 import About from '../About';
 import Projects from '../Projects';
 import Recommendation from '../Recommendation';
+import Connect from '../Connect';
 import './style.css';
 
 export default class App extends React.Component {
@@ -25,7 +26,7 @@ export default class App extends React.Component {
   scrollToSection(linkName) {
     $('html, body').animate({
       scrollTop: $("#" + linkName).offset().top
-    }, 1000);
+    }, 850);
   }
 
   /**
@@ -45,10 +46,10 @@ export default class App extends React.Component {
       <div className="container-fluid main-container">
         <ScrollEvent handleScrollCallback={this.handleScrollCallback} />
 
-        <Navbar scrollToSection={this.scrollToSection}/>
+        <Navbar scrollToSection={this.scrollToSection} />
 
         <section id="Home" >
-          <Home scrollToSection={this.scrollToSection}/>
+          <Home scrollToSection={this.scrollToSection} />
         </section>
 
         <section id="Skills">
@@ -67,15 +68,15 @@ export default class App extends React.Component {
           <Recommendation />
         </section>
 
-        <section id="Connect" style={{height: '700px', background: '#001923'}}>
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
-                <h1>Contact Section</h1>
-              </div>
-            </div>
-          </div>
+        <section id="Connect">
+          <Connect />
         </section>
+
+        <footer className="row text-center">
+          <p>Copyright &copy; 2017, Jon Lee.</p>
+          <p>Built from scratch with Node and React.</p>
+        </footer>
+
       </div>
     );
   }

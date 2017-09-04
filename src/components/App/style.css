@@ -18,6 +18,12 @@ h1{
   letter-spacing: 1px;
 }
 
+footer{
+  margin: 10px;
+  line-height: 1.6;
+  color:  rgba(225, 225, 225, 0.68);
+}
+
 .container-fluid {
   padding-right: 15px;
   padding-left: 15px;
@@ -178,12 +184,7 @@ ul.banner-social-buttons {
     margin-bottom: 0;
   }
 }
-footer {
-  padding: 50px 0;
-}
-footer p {
-  margin: 0;
-}
+
 ::-moz-selection {
   text-shadow: none;
   background: #fcfcfc;

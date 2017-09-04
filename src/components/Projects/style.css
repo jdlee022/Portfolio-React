@@ -3,6 +3,10 @@
   text-shadow: 0 2px 2px black;
 }
 
+.projects-container h1{
+  margin-bottom: 30px;
+}
+
 .project-text{
   padding-left: 5%;
 }

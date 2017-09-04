@@ -11,14 +11,14 @@ export default class Skills extends React.Component {
 
   render() {
     return (
-      <div className="container skills-container">
+      <div className="container-fluid skills-container">
         <div className="row">
           <div className="col-md-8 col-md-offset-2 text-center">
             <h1 id="skills-header">Skills</h1>
           </div>
         </div>
 
-        <div className="row">
+        <div className="row skills-row">
           <div className="col-md-3 text-center">
             <img src={ideationLogo} alt="ideation logo" />
             <br />
@@ -45,7 +45,7 @@ export default class Skills extends React.Component {
           </div>
         </div>
 
-        <div className="row text-center">
+        <div className="row text-center bubble-row">
           <img id="bubble" src={bubble} alt="bubble" />
         </div>
 

@@ -1,0 +1,47 @@
+#connect-title{
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.connect-container{
+  background: url('../utilities/img/connect-background.png');
+}
+
+.connect-container p{
+  font-size: 20px;
+  text-shadow: 0 2px 2px black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#email-link{
+  font-size: 24px;
+  margin-bottom: 70px;
+}
+
+#connect-icons img{
+  margin: 20px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.tint {
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  -webkit-box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+  -moz-box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+  box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+}
+
+.connect-container img {
+  opacity: .8;
+  cursor: pointer;
+}
+
+.connect-container img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
