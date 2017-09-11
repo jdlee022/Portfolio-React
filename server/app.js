@@ -9,8 +9,8 @@ mongoose.Promise = Promise;
 const app = express();
 
 // Connect to mongoose
-mongoose.connect('mongodb://localhost/blog');
-var db = mongoose.connection;
+// mongoose.connect('mongodb://localhost/blog');
+// var db = mongoose.connection;
 
 // Setup logger
 app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] :response-time ms'));
