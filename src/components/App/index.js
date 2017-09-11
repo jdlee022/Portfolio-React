@@ -73,7 +73,9 @@ export default class App extends React.Component {
         </section>
 
         <footer className="row text-center">
-          <p>Copyright &copy; 2017, Jon Lee.</p>
+          <p>Version 1.0.0 - 9/10/17</p>
+          <p><a href="https://github.com/jdlee022/Portfolio-React" target="__blank">View source code</a>
+          </p>
           <p>Built from scratch with Node and React.</p>
         </footer>
 

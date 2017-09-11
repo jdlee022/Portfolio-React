@@ -7,7 +7,7 @@ export default class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      links: ["Home", "About", "Projects", "Blog", "Connect"]
+      links: ["Home", "About", "Projects", "Connect"]
     }
     this.scrollToSection = this.props.scrollToSection.bind(this);
     this.collapseNavbar = this.collapseNavbar.bind(this);

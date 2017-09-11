@@ -3,7 +3,7 @@
 } */
 #skills-header{
   margin-top: 60px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 p{
@@ -30,6 +30,10 @@ h4{
 .skills-row{
   margin-left: 4.5%;
   margin-right: 4.5%;
+}
+
+.skills-row img{
+  margin-top: 20px;
 }
 
 #bubble{
