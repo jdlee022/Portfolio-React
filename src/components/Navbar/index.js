@@ -23,11 +23,17 @@ export default class Navbar extends React.Component {
   //   }, 1000);
   // }
 
-  collapseNavbar(){
+  collapseNavbar() {
     if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
+      $(".navbar-fixed-top").addClass("top-nav-collapse");
     } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+      $(".navbar-fixed-top").removeClass("top-nav-collapse");
+    }
+  }
+
+  displayHamburger() {
+    if (window.innerWidth < 800) {
+      console.log("mobile!");
     }
   }
 
@@ -38,7 +44,7 @@ export default class Navbar extends React.Component {
     );
 
     return (
-      <nav className="navbar navbar-custom navbar-fixed-top" onScroll={this.collapseNavbar}>
+      <nav className="navbar navbar-custom top-nav-collapse navbar-fixed-top" id="mainNav" onScroll={this.collapseNavbar}>
         <div className="container-fluid">
           <div className="collapse navbar-collapse navbar-right navbar-main-collapse">
             <ul className="nav navbar-nav">
@@ -51,3 +57,4 @@ export default class Navbar extends React.Component {
     );
   }
 }
+

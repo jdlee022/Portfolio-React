@@ -106,8 +106,11 @@ export default class Home extends React.Component {
       }
 
       c.fillStyle = "#eaeaea";
-      c.font = "25px 'Helvetica'";
-      var textString = "Hi, I'm Jon. I design and build responsive web applications.",
+      c.font = "bold 28px 'Helvetica'";
+      if(canvas.width < 900){
+        c.font = "bold 20px 'Helvetica'";
+      }
+      var textString = "Hi, I'm Jon. I design and build web applications from scratch.",
         textWidth = c.measureText(textString).width;
       c.save();
       c.translate((canvas.width / 2) - (textWidth / 2), canvas.height / 2);

@@ -51,7 +51,7 @@
 .navbar-custom .nav li.active a:hover {
   color: white;
 }
-@media (min-width: 750px) {
+@media (min-width: 70px) {
   .navbar-custom {
     padding: 20px 0;
     border-bottom: none;
