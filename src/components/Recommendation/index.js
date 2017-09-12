@@ -7,7 +7,7 @@ export default class Recommendation extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid recommendation-container">
+      <div className="recommendation-container">
         <div className="row content">
           <div className="col-md-8 col-md-offset-2 text-center">
             <blockquote id="quote">"As one of the top students in the class, Jon demonstrated a firm grasp of programming principles as well as the ability to learn on his own, given a set of tools and a place to start from."</blockquote>

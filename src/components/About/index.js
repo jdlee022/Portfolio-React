@@ -10,7 +10,7 @@ export default class About extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid about-container">
+      <div className="about-container">
         <div className="row">
           <div className="col-md-6 ">
             <div id="pic-container">

@@ -13,7 +13,7 @@ export default class Projects extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid projects-container">
+      <div className="projects-container">
         <div className="row">
           <div className="projects-header col-md-12 text-center">
             <h1 id="projects-title">Projects</h1>

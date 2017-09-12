@@ -11,7 +11,7 @@ export default class Skills extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid skills-container">
+      <div className="skills-container">
         <div className="row">
           <div className="col-md-8 col-md-offset-2 text-center">
             <h1 id="skills-header">Skills</h1>

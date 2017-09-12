@@ -10,7 +10,7 @@ export default class Connect extends React.Component {
   render() {
 
     return (
-      <div className="container-fluid connect-container">
+      <div className="connect-container">
         <div className="row">
           <div className="col-md-8 col-md-offset-2 text-center">
             <h1 id="connect-title">Connect</h1>
