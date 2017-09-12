@@ -22,7 +22,7 @@ export default class About extends React.Component {
           <div className="col-md-6 text-center">
             <h1 id="about-header">About Me</h1>
             <p id="about-text">
-              I discovered my passion for application development at an iOS Bootcamp in the summer of 2016, before my 4th year as an applied mathematics student at the University of California, San Diego. Building a practical application that anyone can download and interact with in just 5 weeks is the most thrilling accomplishment in my academic career and something that I never thought possible as a mathematician. This realization motivated me to enroll in as many software development courses as possible, along with a Full Stack Web Development Bootcamp while I finished off my BS in applied mathematics. Since then, I've continued to build personal projects like this portfolio website while I search for a position as a Web Developer in Seattle, WA.
+              I discovered my passion for application development at an iOS Bootcamp in the summer of 2016, before my 4th year as an applied mathematics student at the University of California, San Diego. Building a practical application that anyone can download and interact with in just 5 weeks is the most thrilling achievement in my academic career and something that I never thought possible as a mathematician. This realization motivated me to enroll in as many software development courses as possible, along with a Full Stack Web Development Bootcamp while I finished off my BS in applied mathematics. Since then, I've continued to build personal projects like this portfolio website while I search for a position as a Web Developer in Seattle, WA.
             </p>
 
           </div>

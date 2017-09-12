@@ -85,7 +85,7 @@ export default class Home extends React.Component {
     // Regenerate all circles on canvas (whenever browser size changes)
     function init() {
       circleArr = [];
-      for (var i = 0; i < 1000; i++) {
+      for (var i = 0; i < 800; i++) {
         var radius = Math.random() * 3 + 1;
         var x = Math.random() * (window.innerWidth - radius * 2) + radius;
         var y = Math.random() * (window.innerHeight - radius * 2) + radius;
