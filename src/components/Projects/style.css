@@ -48,9 +48,9 @@
 /* mobile */
 @media (max-width: 800px){
     .project-text{
-      margin-left: 20px;
+      margin-left: 10px;
     }
     .project-text{
-      margin-right: 20px;
+      margin-right: 10px;
     }
   }
