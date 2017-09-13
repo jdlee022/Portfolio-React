@@ -5,6 +5,7 @@ import './style.css';
 import me from '../utilities/img/me01.png';
 import me2 from '../utilities/img/me02.png';
 import me3 from '../utilities/img/me03.png';
+import me4 from '../utilities/img/me04.png';
 
 export default class About extends React.Component {
 
@@ -17,6 +18,7 @@ export default class About extends React.Component {
               <img className="about-pic small-pic" src={me} alt="about pic" />
               <img className="about-pic medium-pic" src={me2} alt="about pic" />
               <img className="about-pic large-pic" src={me3} alt="about pic" />
+              <img className="about-pic mobile-pic" src={me4} alt="about pic" />
             </div>
           </div>
           <div className="col-md-6 text-center">

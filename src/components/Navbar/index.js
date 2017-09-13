@@ -44,13 +44,12 @@ export default class Navbar extends React.Component {
     );
 
     return (
-      <nav className="navbar navbar-custom top-nav-collapse navbar-fixed-top" id="mainNav" onScroll={this.collapseNavbar}>
-        <div className="container-fluid">
-          <div className="collapse navbar-collapse navbar-right navbar-main-collapse">
-            <ul className="nav navbar-nav">
-              {linkItems}
-            </ul>
-          </div>
+
+      <nav className="navbar navbar-custom top-nav-collapse navbar-fixed-top" onScroll={this.collapseNavbar}>
+        <div className="collapse navbar-collapse navbar-right navbar-main-collapse">
+          <ul className="nav navbar-nav">
+            {linkItems}
+          </ul>
         </div>
       </nav>
 
