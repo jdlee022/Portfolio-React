@@ -110,7 +110,7 @@ export default class Home extends React.Component {
       var textString = "Hi, I'm Jon. I design and build web applications from scratch.",
       textWidth = c.measureText(textString).width;
       if(canvas.width < 800){
-        c.font = "bold 14px 'Helvetica'";
+        c.font = "bold 15px 'Helvetica'";
         textString = "Hi, I'm Jon. I design and build web applications.";
         textWidth = c.measureText(textString).width;
       }
