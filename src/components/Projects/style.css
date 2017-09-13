@@ -44,3 +44,13 @@
 .scalegenius-link:hover{
   color: #ffe46e;
 }
+
+/* mobile */
+@media (max-width: 800px){
+    .project-text{
+      margin-left: 25px;
+    }
+    .project-text{
+      margin-right: 25px;
+    }
+  }

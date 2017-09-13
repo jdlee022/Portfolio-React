@@ -46,7 +46,7 @@ export default class App extends React.Component {
       <div className="container-fluid main-container">
         <ScrollEvent handleScrollCallback={this.handleScrollCallback} />
 
-        <Navbar scrollToSection={this.scrollToSection} />
+        <Navbar id="my-nav" scrollToSection={this.scrollToSection} />
 
         <section id="Home" >
           <Home scrollToSection={this.scrollToSection} />

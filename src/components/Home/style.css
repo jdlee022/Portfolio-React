@@ -68,3 +68,8 @@
   cursor: pointer;
   color: #93F1FF;
 }
+
+/* mobile */
+@media (max-width: 800px){
+  
+  }
