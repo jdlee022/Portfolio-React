@@ -21,8 +21,10 @@ h1{
 footer{
   width: 100%;
   margin-right: 0;
-  line-height: 1.6;
+  line-height: 1.4;
   color:  rgba(225, 225, 225, 0.68);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .container-fluid {
@@ -205,7 +207,3 @@ img::-moz-selection {
   background: transparent;
 }
 
-/* mobile */
-@media (max-width: 800px){
-
-}

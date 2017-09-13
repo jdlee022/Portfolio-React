@@ -14,16 +14,18 @@ export default class Connect extends React.Component {
         <div className="row">
           <div className="col-md-8 col-md-offset-2 text-center">
             <h1 id="connect-title">Connect</h1>
-            <p>The best way to contact me is to send me an email.</p>
-            <div id="email-link">
-              <a href="mailto:jdlee022@gmail.com" target="__blank">jdlee022@gmail.com</a>
-            </div>
+            <div className="connect-text">
+              <p>The best way to contact me is to send me an email.</p>
+              <div id="email-link">
+                <a href="mailto:jdlee022@gmail.com" target="__blank">jdlee022@gmail.com</a>
+              </div>
 
-            <p>Feel free to add me on LinkedIn, inspect my code on GitHub, or talk music with me over at Rate Your Music.</p>
+              <p>Feel free to add me on LinkedIn, inspect my code on GitHub, or talk music with me over at Rate Your Music.</p>
+            </div>
             <div id="connect-icons">
               <a href="https://www.linkedin.com/in/jon-lee/" target="__blank"><img src={linkedinIcon} alt="linkedin icon" /></a>
-              <a href="https://github.com/jdlee022" target="__blank"><img src={githubIcon}  alt="github icon" /></a>
-              <a href="https://rateyourmusic.com/~jdlee022" target="__blank"><img src={rymIcon}  alt="rym icon" /></a>
+              <a href="https://github.com/jdlee022" target="__blank"><img src={githubIcon} alt="github icon" /></a>
+              <a href="https://rateyourmusic.com/~jdlee022" target="__blank"><img src={rymIcon} alt="rym icon" /></a>
             </div>
           </div>
         </div>
