@@ -39,6 +39,9 @@
 .connect-container img {
   opacity: .8;
   cursor: pointer;
+
+  width: 100px;
+  height: auto;
 }
 
 .connect-container img:hover {
@@ -50,3 +53,11 @@
   margin-left: 10px;
   margin-right: 10px;
 }
+
+/* mobile */
+@media (max-width: 800px){
+    .connect-container img {
+      width: 75px;
+      height: auto;
+    }
+  }

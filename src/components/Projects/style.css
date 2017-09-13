@@ -49,8 +49,14 @@
 @media (max-width: 800px){
     .project-text{
       margin-left: 10px;
-    }
-    .project-text{
       margin-right: 10px;
+    }
+    #projects-subtitle{
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .project-screenshot{
+      width: 380px;
+      height: auto;
     }
   }

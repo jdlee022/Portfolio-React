@@ -22,3 +22,11 @@ blockquote{
 #felipe-img{
   padding-top: 10px;
 }
+
+/* mobile */
+@media (max-width: 800px){
+  #felipe-img{
+    width: 340px;
+    height: auto;
+  }
+}
