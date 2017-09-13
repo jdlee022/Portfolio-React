@@ -15,6 +15,12 @@ React
 Bootstrap
 
 
+## Versions
+
+Version 1.0.0 - initial launch.
+
+Version 1.1.0 - made portfolio more mobile friendly.
+
 ## Issues/Future Improvements
 
 Blog section of the website coming soon.

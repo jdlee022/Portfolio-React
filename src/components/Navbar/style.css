@@ -68,3 +68,9 @@
   background: black;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+@media (max-width: 800) {
+  .navbar-custom{
+    display: none;
+  }
+}

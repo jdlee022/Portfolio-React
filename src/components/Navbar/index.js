@@ -11,6 +11,7 @@ export default class Navbar extends React.Component {
     }
     this.scrollToSection = this.props.scrollToSection.bind(this);
     this.collapseNavbar = this.collapseNavbar.bind(this);
+    this.displayNav = this.displayNav.bind(this);
   }
 
   // /**
@@ -31,27 +32,30 @@ export default class Navbar extends React.Component {
     }
   }
 
-  displayHamburger() {
-    if (window.innerWidth < 800) {
-      console.log("mobile!");
-    }
-  }
-
-  render() {
-    // Generate the navbar links based on this component's state
+  displayNav() {
+    
+    if (window.innerWidth > 800) {
+      // Generate the navbar links based on this component's state
     const linkItems = this.state.links.map((link, index) =>
-      <li key={index} className="link page-scroll"><a onClick={() => this.scrollToSection(link)}>{link}</a></li>
-    );
-
-    return (
-
-      <nav className="navbar navbar-custom top-nav-collapse navbar-fixed-top" onScroll={this.collapseNavbar}>
+    <li key={index} className="link page-scroll"><a onClick={() => this.scrollToSection(link)}>{link}</a></li>
+  );
+      return <nav className="navbar navbar-custom top-nav-collapse navbar-fixed-top" onScroll={this.collapseNavbar}>
         <div className="collapse navbar-collapse navbar-right navbar-main-collapse">
           <ul className="nav navbar-nav">
             {linkItems}
           </ul>
         </div>
-      </nav>
+      </nav>;
+    }
+  }
+
+  render() {
+    
+
+    return (
+      <div>
+      {this.displayNav()}
+      </div>
 
     );
   }

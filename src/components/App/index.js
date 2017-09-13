@@ -33,11 +33,14 @@ export default class App extends React.Component {
    * 
    */
   handleScrollCallback() {
-    if ($(".navbar").offset().top > 50) {
-      $(".navbar-fixed-top").addClass("top-nav-collapse");
-    } else {
-      $(".navbar-fixed-top").removeClass("top-nav-collapse");
+    if (window.innerWidth > 800) {
+      if ($(".navbar").offset().top > 50) {
+        $(".navbar-fixed-top").addClass("top-nav-collapse");
+      } else {
+        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+      }
     }
+
   }
 
 
@@ -46,7 +49,7 @@ export default class App extends React.Component {
       <div className="container-fluid main-container">
         <ScrollEvent handleScrollCallback={this.handleScrollCallback} />
 
-        <Navbar id="my-nav" scrollToSection={this.scrollToSection} />
+        <Navbar scrollToSection={this.scrollToSection} />
 
         <section id="Home" >
           <Home scrollToSection={this.scrollToSection} />
