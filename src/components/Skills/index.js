@@ -1,11 +1,14 @@
+/** @file - manages the skills section on the main page.
+ * Also imports and renders the skill bubble cloud.
+ */
 import React from 'react';
 
+import './style.css';
 import ideationLogo from '../utilities/img/ideation.png';
 import designLogo from '../utilities/img/design.png';
 import developmentLogo from '../utilities/img/development.png';
 import teamworkLogo from '../utilities/img/teamwork.png';
 import bubble from '../utilities/img/bubble.png';
-import './style.css';
 
 export default class Skills extends React.Component {
 
@@ -48,7 +51,6 @@ export default class Skills extends React.Component {
         <div className="row text-center bubble-row">
           <img id="bubble" src={bubble} alt="bubble" />
         </div>
-
       </div>
     );
   }

@@ -1,7 +1,23 @@
 .about-container{
   background: #C9C9C9;
   color: #27313B;
-  /* background: #171717; */
+}
+
+#about-header{
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+#about-text{
+  margin: 25px;
+  margin-right: 40px;
+  text-align: left;
+}
+
+.about-pic{
+  height: 400px;
+  width: 100%;
+  max-height: 470px;
 }
 
 .large-pic{
@@ -53,26 +69,6 @@
   .mobile-pic{
     display: none;
   }
-}
-
-.about-pic{
-  height: 400px;
-  width: 100%;
-  max-height: 470px;
-
-}
-
-#about-text{
-  /* margin-right: 25px; */
-  /* margin-bottom: 20px; */
-  margin: 25px;
-  margin-right: 40px;
-  text-align: left;
-}
-
-#about-header{
-  margin-top: 60px;
-  margin-bottom: 30px;
 }
 
 /* mobile */

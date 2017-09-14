@@ -1,10 +1,10 @@
+/** @file - this component manages the recommendation quotation on the main page */
 import React from "react";
 
 import './style.css';
 import felipe from '../utilities/img/felipe.png';
 
 export default class Recommendation extends React.Component {
-
   render() {
     return (
       <div className="recommendation-container">

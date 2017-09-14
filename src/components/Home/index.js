@@ -1,3 +1,6 @@
+/** 
+ * @file manages the landing page of the website. Consists of all code related to the canvas.
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
@@ -8,13 +11,16 @@ export default class Home extends React.Component {
     this.scrollToSection = this.props.scrollToSection.bind(this);
   }
 
+  /** Contains all canvas drawing code */
   componentDidMount() {
+    // Get the canvas from the DOM
     let canvas = ReactDOM.findDOMNode(this.refs.myCanvas);
+    var c = canvas.getContext('2d');
     // Make canvas take up entire browser
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    var c = canvas.getContext('2d');
+    // Declare variables used for canvas
     var mouse = {
       x: undefined,
       y: undefined
@@ -37,6 +43,16 @@ export default class Home extends React.Component {
       init();
     });
 
+    // Returns the position of the mouse
+    function getMousePos(canvas, evt) {
+      var rect = canvas.getBoundingClientRect();
+      return {
+        x: evt.clientX - rect.left,
+        y: evt.clientY - rect.top
+      };
+    }
+
+    // Define circle class
     function Circle(x, y, dx, dy, radius) {
       this.x = x;
       this.y = y;
@@ -46,6 +62,7 @@ export default class Home extends React.Component {
       this.minRadius = radius;
       this.color = colorArr[Math.floor(Math.random() * colorArr.length)];
 
+      // Draws the circle on the canvas based on the Circle's properties
       this.draw = function () {
         c.beginPath();
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
@@ -53,10 +70,11 @@ export default class Home extends React.Component {
         c.fillStyle = this.color;
         c.fill();
         c.closePath();
-
       }
 
+      // Updates the position and radius of the Circle
       this.update = function () {
+        // Reverse x (and y) velocity if it runs into the edge of screen
         if (this.x + this.radius > window.innerWidth || this.x - this.radius < 0) {
           this.dx = -this.dx;
         }
@@ -66,11 +84,11 @@ export default class Home extends React.Component {
         this.x += this.dx;
         this.y += this.dy;
 
-        // interactivity with mouse
-        //increase the circle size when mouse is within 50px, unless it's hovering over a link
-        if (mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y < 50 && mouse.y - this.y > -50 && (mouse.y > 100 || mouse.x < window.innerWidth - 500) && (mouse.y < window.innerHeight - 90 || mouse.x < window.innerWidth/2-65 || mouse.x > window.innerWidth/2+65)) {
-          //only increase circle size until it reaches max radius
-          if (this.radius < maxRadius) {
+        // Interactivity with mouse
+        // Increase the circle size when mouse is within 50px, unless it's hovering over a link
+        if (mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y < 50 && mouse.y - this.y > -50 && (mouse.y > 100 || mouse.x < window.innerWidth - 500) && (mouse.y < window.innerHeight - 90 || mouse.x < window.innerWidth / 2 - 65 || mouse.x > window.innerWidth / 2 + 65)) {
+          // Increase circle size until it reaches max radius. Disable for mobile
+          if (this.radius < maxRadius && window.innerWidth > 770) {
             this.radius += 1.66;
           }
         }
@@ -78,26 +96,25 @@ export default class Home extends React.Component {
           this.radius -= 1;
         }
 
+        // Redraw the circle after properties have been updated
         this.draw();
       }
     }
 
-    // Regenerate all circles on canvas (whenever browser size changes)
+    // Generate all circles on canvas
     function init() {
       circleArr = [];
-      for (var i = 0; i < 700; i++) {
+      for (var i = 0; i < 600; i++) {
         var radius = Math.random() * 3 + 1;
         var x = Math.random() * (window.innerWidth - radius * 2) + radius;
         var y = Math.random() * (window.innerHeight - radius * 2) + radius;
         var dx = (Math.random() - 0.5);
         var dy = (Math.random() - 0.5);
-
         circleArr.push(new Circle(x, y, dx, dy, radius));
       }
-
-
     }
 
+    // Continuously called, clears canvas and redraws all circles with updated properties
     function animate() {
       requestAnimationFrame(animate);
       c.clearRect(0, 0, window.innerWidth, window.innerHeight);
@@ -105,16 +122,17 @@ export default class Home extends React.Component {
         circleArr[i].update();
       }
 
+      // Draw text in center of canvas
       c.fillStyle = "#eaeaea";
       c.font = "bold 28px 'Helvetica'";
       var textString = "Hi, I'm Jon. I design and build web applications from scratch.",
-      textWidth = c.measureText(textString).width;
-      if(canvas.width < 800){
+        textWidth = c.measureText(textString).width;
+      // Draw different text for mobile width
+      if (canvas.width < 800) {
         c.font = "bold 15px 'Helvetica'";
         textString = "Hi, I'm Jon. I design and build web applications.";
         textWidth = c.measureText(textString).width;
       }
-      
       c.save();
       c.translate((canvas.width / 2) - (textWidth / 2), canvas.height / 2);
       c.shadowColor = "black";
@@ -123,32 +141,23 @@ export default class Home extends React.Component {
       c.shadowBlur = 10;
       c.fillText(textString, 0, 0);
       c.restore();
-
-    }
-
-    function getMousePos(canvas, evt) {
-      var rect = canvas.getBoundingClientRect();
-      return {
-        x: evt.clientX - rect.left,
-        y: evt.clientY - rect.top
-      };
     }
 
     init();
     animate();
   }
 
-
   render() {
     return (
       <div className="text-center">
         <canvas ref="myCanvas" />
-        <a id="learnBtn" onClick={() => this.scrollToSection("Skills")}>
-        Learn more<br />
-        <i className="glyphicon glyphicon-chevron-down"></i>
-      </a>
+        <div id="learnBtn">
+          <a onClick={() => this.scrollToSection("Skills")}>
+            Learn more<br />
+            <i className="glyphicon glyphicon-chevron-down"></i>
+          </a>
+        </div>
       </div>
     );
   }
 }
-

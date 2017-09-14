@@ -1,7 +1,11 @@
+/**
+ * @file - this component is the main container for all other components.
+ * All content for the main page is imported and rendered here.
+ */
 import React from 'react';
-import ScrollEvent from 'react-onscroll';
 import $ from 'jquery';
 
+import './style.css';
 // Child component's to be rendered
 import Navbar from '../Navbar';
 import Home from '../Home';
@@ -10,12 +14,12 @@ import About from '../About';
 import Projects from '../Projects';
 import Recommendation from '../Recommendation';
 import Connect from '../Connect';
-import './style.css';
+
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.handleScrollCallback = this.handleScrollCallback.bind(this);
+    
     this.scrollToSection = this.scrollToSection.bind(this);
   }
 
@@ -29,26 +33,9 @@ export default class App extends React.Component {
     }, 850);
   }
 
-  /**
-   * 
-   */
-  handleScrollCallback() {
-    if (window.innerWidth > 800) {
-      if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-      } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
-      }
-    }
-
-  }
-
-
   render() {
     return (
       <div className="container-fluid main-container">
-        <ScrollEvent handleScrollCallback={this.handleScrollCallback} />
-
         <Navbar scrollToSection={this.scrollToSection} />
 
         <section id="Home" >
@@ -81,7 +68,6 @@ export default class App extends React.Component {
           </p>
           <p>Built from scratch with Node and React.</p>
         </footer>
-
       </div>
     );
   }

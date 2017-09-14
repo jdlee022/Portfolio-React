@@ -1,3 +1,7 @@
+/**
+ * @file - this component manages the Projects section of the main page.
+ * Including each individual project.
+ */
 import React from 'react';
 import { Parallax } from 'react-parallax';
 
