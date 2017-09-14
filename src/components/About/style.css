@@ -72,10 +72,8 @@
 }
 
 /* mobile */
-@media (max-width: 800px){
+@media (max-width: 770px){
   #about-text{
-    /* margin-right: 25px; */
-    /* margin-bottom: 20px; */
     margin-left: 25px;
     margin-right: 25px;
     text-align: center;

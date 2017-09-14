@@ -22,7 +22,7 @@ blockquote{
 }
 
 /* mobile */
-@media (max-width: 800px){
+@media (max-width: 770px){
   #felipe-img{
     width: 340px;
     height: auto;

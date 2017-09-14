@@ -9,6 +9,7 @@ import designLogo from '../utilities/img/design.png';
 import developmentLogo from '../utilities/img/development.png';
 import teamworkLogo from '../utilities/img/teamwork.png';
 import bubble from '../utilities/img/bubble.png';
+import bubbleMobile from '../utilities/img/bubble-mobile.png';
 
 export default class Skills extends React.Component {
 
@@ -49,7 +50,11 @@ export default class Skills extends React.Component {
         </div>
 
         <div className="row text-center bubble-row">
-          <img id="bubble" src={bubble} alt="bubble" />
+          <div className="col-md-12">
+          <img className="bubble bubble-desktop" src={bubble} alt="bubble" />
+          <img className="bubble bubble-mobile" src={bubbleMobile} alt="bubble" />
+          </div>
+          
         </div>
       </div>
     );
