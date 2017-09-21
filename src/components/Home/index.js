@@ -28,7 +28,7 @@ export default class Home extends React.Component {
     var circleArr = [];
     var colorArr = ['#FFF2AD', '#FFED93', '#F6FF84', '##fffc95', '#FFE556', '#C8F8FF', '#AFF5FF', '#86F0FF', '#67ECFF', '#3BE4FC', '#FABCF5', '#E5ADFF', '#F18BE8', '#FF71E9', '#E362D8'];
     var maxRadius = 40;
-    var minRadius = 2;
+    var minRadius = 3;
 
     // Update mouse position when it's moved
     window.addEventListener('mousemove', function (event) {
@@ -104,8 +104,8 @@ export default class Home extends React.Component {
     // Generate all circles on canvas
     function init() {
       circleArr = [];
-      for (var i = 0; i < 600; i++) {
-        var radius = Math.random() * 3 + 1;
+      for (var i = 0; i < 450; i++) {
+        var radius = Math.random() * 3 + 2;
         var x = Math.random() * (window.innerWidth - radius * 2) + radius;
         var y = Math.random() * (window.innerHeight - radius * 2) + radius;
         var dx = (Math.random() - 0.5);

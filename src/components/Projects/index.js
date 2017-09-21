@@ -5,13 +5,23 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
 
+import Recommendation from '../Recommendation';
+
 import './style.css';
 import philScreenshot from '../utilities/img/phil-screenshot.png';
 import philBackground from '../utilities/img/phil-background.jpg';
 import synthLordScreenshot from '../utilities/img/synth-lord-screenshot.png';
 import synthLordBackground from '../utilities/img/synth-lord-background.png';
-import scaleGeniusBackground from '../utilities/img/scalegenius-background.png';
 import scaleGeniusScreenshot from '../utilities/img/scalegenius-screenshot.png';
+import scaleGeniusBackground from '../utilities/img/scalegenius-background.png';
+import surfNTurfScreenshot from '../utilities/img/surf-n-turf-screenshot.png';
+import surfNTurfBackground from '../utilities/img/surf-n-turf-background.png';
+import fourWallsScreenshot from '../utilities/img/four-walls-screenshot.png';
+import fourWallsBackground from '../utilities/img/four-walls-background.png';
+import gradScreenshot from '../utilities/img/grad-screenshot.png';
+import gradBackground from '../utilities/img/grad-background.png';
+import felipe from '../utilities/img/felipe.png';
+import stacey from '../utilities/img/stacey.png';
 
 export default class Projects extends React.Component {
 
@@ -24,7 +34,7 @@ export default class Projects extends React.Component {
             <p id="projects-subtitle">
               Check out my code on <a href="https://github.com/jdlee022" target="__blank">GitHub</a>.
               <br />
-              Note that some project links will take extra long for the initial launch due to Heroku deployment.
+              Note that some project links can take up to 10 seconds for the initial launch due to Heroku deployment.
             </p>
           </div>
         </div>
@@ -49,7 +59,7 @@ export default class Projects extends React.Component {
         <Parallax bgImage={synthLordBackground} strength={400}>
           <div className="row">
             <div className="col-md-6 project-text">
-              <h1 ><a className="synth-lord-link" href="https://synthlord.herokuapp.com/" target="__blank">Synth Lord</a></h1>
+              <h1 ><a className="pink-link" href="https://synthlord.herokuapp.com/" target="__blank">Synth Lord</a></h1>
               <p>
                 Synth Lord is a web based synthesizer with MIDI support. It uses the Web Audio API to manipulate sound in the web browser, essentially providing the software component of a synthesizer to MIDI controllers which comprise the hardware component. The computer keys (starting with asdf) can also be used to play notes and are all you need to begin experimenting with some wacky sounds.
               <br /><br />
@@ -58,7 +68,7 @@ export default class Projects extends React.Component {
             </p>
               <br />
               <p>Technologies used: Node, Express, MySQL, Amazon Web Services S3, Web Audio API, Bootstrap</p>
-              <a className="synth-lord-link" href="https://github.com/jdlee022/Synth-Lord" target="__blank"><p>Source code</p></a>
+              <a className="pink-link" href="https://github.com/jdlee022/Synth-Lord" target="__blank"><p>Source code</p></a>
             </div>
             <div className="col-md-6 text-center">
               <a href="https://synthlord.herokuapp.com/" target="__blank"><img className="project-screenshot" src={synthLordScreenshot} alt="synth lord screenshot" /></a>
@@ -69,19 +79,84 @@ export default class Projects extends React.Component {
         <Parallax bgImage={scaleGeniusBackground} strength={400}>
           <div className="row">
             <div className="col-md-6 project-text">
-              <h1 ><a className="scalegenius-link" href="https://itunes.apple.com/us/app/scalegenius-scales-for-alternate-guitar-tunings/id1141755821?mt=8" target="__blank">ScaleGenius</a></h1>
+              <h1 ><a className="yellow-link" href="https://itunes.apple.com/us/app/scalegenius-scales-for-alternate-guitar-tunings/id1141755821?mt=8" target="__blank">ScaleGenius</a></h1>
               <p>
-                ScaleGenius is an easy-to-use reference guide for guitar players who like to experiment and practice with alternate tunings. This mobile app was developed in an 8-week iOS Bootcamp in which I learned the Swift programming language from scratch and built my own app which can be found on the iOS App Store by searching <a className="scalegenius-link" href="https://itunes.apple.com/us/app/scalegenius-scales-for-alternate-guitar-tunings/id1141755821?mt=8" target="__blank">"ScaleGenius"</a>.
+                ScaleGenius is an easy-to-use reference guide for guitar players who like to experiment and practice with alternate tunings. This mobile app was developed in an 8-week iOS Bootcamp in which I learned the Swift programming language from scratch and built my own app which can be found on the iOS App Store by searching <a className="yellow-link" href="https://itunes.apple.com/us/app/scalegenius-scales-for-alternate-guitar-tunings/id1141755821?mt=8" target="__blank">"ScaleGenius"</a>.
             </p>
               <br />
               <p>Technologies used: Swift, Xcode, Sketch, Balsamiq</p>
-              <a className="scalegenius-link" href="https://github.com/jdlee022/ScaleGenius" target="__blank"><p>Source code</p></a>
+              <a className="yellow-link" href="https://github.com/jdlee022/ScaleGenius" target="__blank"><p>Source code</p></a>
             </div>
             <div className="col-md-6 text-center">
               <a href="https://itunes.apple.com/us/app/scalegenius-scales-for-alternate-guitar-tunings/id1141755821?mt=8" target="__blank"><img className="project-screenshot" src={scaleGeniusScreenshot} alt="scalegenius screenshot" /></a>
             </div>
           </div>
         </Parallax>
+
+
+
+        <Parallax bgImage={surfNTurfBackground} strength={400}>
+          <div className="row">
+            <div className="col-md-6 project-text">
+              <h1 ><a href="https://github.com/jdlee022/Project-SurfNTurf" target="__blank">Surf N' Turf</a></h1>
+              <p>
+                Surf N' Turf is a web application allowing users to search for nearby hiking and surfing spots. For each spot, the app displays relevant information such as weather, rating, images, and Google Map location. This project is one of the first web apps that I built from scratch, setting the foundation of my skills with Git workflow, project architecture, and employment of multiple APIs.
+          </p>
+              <br />
+              <p>Technologies used: Firebase, jQuery, Google Places API, OpenWeatherMap API, SASS</p>
+              <a href="https://github.com/jdlee022/Project-SurfNTurf" target="__blank"><p>Source code</p></a>
+            </div>
+            <div className="col-md-6 text-center">
+              <a href="https://github.com/jdlee022/Project-SurfNTurf" target="__blank"><img className="project-screenshot" src={surfNTurfScreenshot} alt="surfnturf screenshot" /></a>
+            </div>
+          </div>
+        </Parallax>
+
+        <Parallax bgImage={gradBackground} strength={400}>
+        <div className="row">
+          <div className="col-md-6 project-text">
+            <h1 ><a className="pink-link" href="https://github.com/jdlee022/GRAD" target="__blank">GRAD</a></h1>
+            <p>
+            GRAD is a web app for UC San Diego students to map out prerequisites for advanced courses in graph format. This group project was developed in a software development course at the UC San Diego. Throughout the class, I practiced agile methodologies and contributed to artifacts including user stories, use cases, database schemas, and screen sequence diagrams.
+        </p>
+            <br />
+            <p>Technologies used: Agile Methodology, Node, Bootstrap</p>
+            <a className="pink-link" href="https://github.com/jdlee022/GRAD" target="__blank"><p>Source code</p></a>
+          </div>
+          <div className="col-md-6 text-center">
+            <a href="https://github.com/jdlee022/GRAD" target="__blank"><img className="project-screenshot" src={gradScreenshot} alt="grad screenshot" /></a>
+          </div>
+        </div>
+      </Parallax>
+
+        <Parallax bgImage={fourWallsBackground} strength={400}>
+          <div className="row">
+            <div className="col-md-6 project-text">
+              <h1 ><a className="yellow-link" href="https://docs.google.com/document/d/1o0sz_oRWqMOLQb48ZWMv-Hd1w1pijRfUxQwTcU_yuHY/edit" target="__blank">4 Walls Website Design</a></h1>
+              <p>
+                The 4 Walls Design Document is an implementation plan created with the purpose of improving the information architecture and UI/UX of the 4 Walls International website. This group project was constructed in the Human Centered Design course at UC San Diego. During the class, I learned the importance of collaborating with end-users to better understand their needs and requirements in order to ensure a more accessible and sustainable solution.
+        </p>
+              <br />
+              <p>Skills used: Information Architecture, UI/UX, Communication</p>
+              <a className="yellow-link" href="https://docs.google.com/document/d/1o0sz_oRWqMOLQb48ZWMv-Hd1w1pijRfUxQwTcU_yuHY/edit" target="__blank"><p>Design document</p></a>
+            </div>
+            <div className="col-md-6 text-center">
+              <a href="https://docs.google.com/document/d/1o0sz_oRWqMOLQb48ZWMv-Hd1w1pijRfUxQwTcU_yuHY/edit" target="__blank"><img className="project-screenshot" src={fourWallsScreenshot} alt="4 walls screenshot" /></a>
+            </div>
+          </div>
+        </Parallax>
+
+        <div className="row rec-row">
+        <div className="col-md-6 rec-left">
+        <Recommendation className="recommendation" recQuote="&quot;As one of the top students in the class, Jon demonstrated a firm grasp of programming principles as well as the ability to learn on his own, given a set of tools and a place to start from.&quot;" recImg={felipe} />
+        </div>
+        <div className="col-md-6 rec-right">
+        <Recommendation className="recommendation"  recQuote="&quot;Jon has a true talent in problem solving and mastering challenging material quickly. He will not disappoint in his technical skills nor his ability to work collaboratively within a team.&quot;" recImg={stacey} />
+        </div>
+        </div>
+        
+        
+      
       </div>
     )
   }

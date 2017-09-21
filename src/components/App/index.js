@@ -12,14 +12,14 @@ import Home from '../Home';
 import Skills from '../Skills';
 import About from '../About';
 import Projects from '../Projects';
-import Recommendation from '../Recommendation';
 import Connect from '../Connect';
+
 
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    
+
     this.scrollToSection = this.scrollToSection.bind(this);
   }
 
@@ -52,10 +52,6 @@ export default class App extends React.Component {
 
         <section id="Projects" >
           <Projects />
-        </section>
-
-        <section id="Recommendation">
-          <Recommendation />
         </section>
 
         <section id="Connect">
