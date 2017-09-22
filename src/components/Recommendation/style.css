@@ -1,6 +1,7 @@
 .recommendation-container{
   color: black;
   width: 100%;
+  background: #C9C9C9;
 }
 
 .req-row{
@@ -31,5 +32,9 @@ blockquote{
   #rec-img{
     width: 340px;
     height: auto;
+  }
+
+  blockquote{
+    padding: 0 25px;
   }
 }
