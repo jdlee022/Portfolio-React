@@ -17,7 +17,8 @@
     "react-dom": "^15.6.1",
     "react-onscroll": "^1.0.4",
     "react-parallax": "^1.4.4",
-    "react-router": "^3.0.5",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "sequelize": "^4.11.0"
   },
   "devDependencies": {
