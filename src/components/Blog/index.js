@@ -10,8 +10,8 @@
 import React from 'react';
 import Navbar from '../Navbar';
 
+import Footer from '../Footer';
 import './style.css';
-
 import me from '../utilities/img/me.png';
 
 export default class Blog extends React.Component {
@@ -67,6 +67,8 @@ export default class Blog extends React.Component {
                     Dynamically brand interdependent "outside the box" thinking after granular outsourcing. Synergistically engineer transparent content before ethical manufactured products.</p>
                     </div>
                 </div>
+
+                <Footer />
             </div>
         );
     }

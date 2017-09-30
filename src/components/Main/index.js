@@ -12,6 +12,7 @@ import Skills from '../Skills';
 import About from '../About';
 import Projects from '../Projects';
 import Connect from '../Connect';
+import Footer from '../Footer';
 
 
 
@@ -42,12 +43,8 @@ export default class Main extends React.Component {
                     <Connect />
                 </section>
 
-                <footer className="row text-center">
-                    <p>Version 1.2.0 - 9/21/17</p>
-                    <p><a href="https://github.com/jdlee022/Portfolio-React" target="__blank">View source code</a>
-                    </p>
-                    <p>Built from scratch with Node and React.</p>
-                </footer>
+                <Footer />
+
             </div>
         );
     }
