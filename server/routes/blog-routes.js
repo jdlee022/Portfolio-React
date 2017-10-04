@@ -1,4 +1,5 @@
 var db = require("../models");
+var marked = require("marked");
 
 module.exports = function (app) {
     // GET all posts from the database
@@ -8,9 +9,9 @@ module.exports = function (app) {
         })
     });
 
-    // GET a post by its title
-    app.get("/api/post/:title", function (req, res) {
-        db.Post.findOne({ where: { title: req.params.title } }).then(function (data) {
+    // GET a post by its id
+    app.get("/api/post/:id", function (req, res) {
+        db.Post.findOne({ where: { id: req.params.id } }).then(function (data) {
             res.json(data)
         });
     });
@@ -22,12 +23,11 @@ module.exports = function (app) {
         });
     });
 
-    //TODO: store both a markdown and html version in db. Use html for fast rendering, md for editing purposes.
     // POST a new post object to the database
     app.post("/api/post", function (req, res) {
         db.Post.create({
             title: req.body.title,
-            text: req.body.text,
+            textMD: req.body.textMD,
             excerpt: req.body.excerpt,
             date: req.body.date,
             featured: req.body.featured,

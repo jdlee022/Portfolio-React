@@ -9,6 +9,7 @@
     "bootstrap": "^3.3.7",
     "express": "^4.15.3",
     "jquery": "^3.2.1",
+    "markdown-to-jsx": "^5.4.2",
     "mongoose": "^4.11.10",
     "morgan": "^1.8.2",
     "mysql": "^2.13.0",

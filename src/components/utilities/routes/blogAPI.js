@@ -3,21 +3,25 @@ import axios from 'axios';
 var blogAPI = {
 
     getAllPosts: function(){
-        return axios('/api/post/all');
+        return axios.get('/api/post/all');
     },
 
     getPostByTitle: function(title){
-        return axios('/api/post/' + title);
+        return axios.get('/api/post/' + title);
+    },
+
+    getPostById: function(id){
+        return axios.get('/api/post/' + id);
     },
 
     getFeaturedPosts: function(){
-        return axios('/api/post/featured');
+        return axios.get('/api/post/featured');
     },
 
     newPost: function(post){
-        return axios('api/post', post);
+        return axios.post('/api/post', post);
     }
 
 }
 
-module.exports = blogAPI;
+export default blogAPI;

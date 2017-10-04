@@ -4,24 +4,27 @@
  * TODO: 
  * Refactor React-Router and the App component, may need to fiddle with Navbar, Footer, and Main components.
  * Have a main blog page that lists all blog posts with excerpts. Clicking on a post title takes you to the blog post page which shows the entire post.t
+ * Add a like button.
  * 
  */
-
 import React from 'react';
+import { Route } from 'react-router-dom';
+import BlogHome from './BlogHome';
 import Navbar from '../Navbar';
-
 import Footer from '../Footer';
+import PostPage from './PostPage';
+
 import './style.css';
 import me from '../utilities/img/me.png';
 
 export default class Blog extends React.Component {
-
     // Always scroll to the top when rendering a blog page
     componentDidMount() {
         window.scrollTo(0, 0);
     }
 
     render() {
+
         return (
             <div className="container blog-container">
                 <Navbar />
@@ -50,14 +53,11 @@ export default class Blog extends React.Component {
                 </header>
 
                 <div className="blog-content row">
-                    <div className="col-md-9">
-                        <p>Intrinsicly exploit user-centric convergence whereas just in time e-markets. Efficiently disintermediate process-centric testing procedures without accurate processes. Collaboratively extend e-business content through cross-media customer service. Dynamically parallel task leveraged expertise vis-a-vis market-driven methods of empowerment. Holisticly expedite synergistic vortals with synergistic ROI.
-
-                        Interactively plagiarize quality process improvements with fully tested technologies. Assertively procrastinate accurate quality vectors after global best practices. Authoritatively formulate synergistic ROI whereas user friendly growth strategies. Compellingly parallel task timely experiences whereas impactful interfaces. Authoritatively embrace standardized e-tailers for value-added supply chains.
-
-                        Enthusiastically empower open-source core competencies without B2C ideas. Intrinsicly integrate resource maximizing data rather than high-quality catalysts for change. Uniquely deliver reliable strategic theme areas without team building portals. Seamlessly target state of the art process improvements and bleeding-edge methods of empowerment. Compellingly initiate compelling technology whereas efficient infrastructures.
-
-                        Progressively harness 2.0 e-markets via interactive paradigms. Progressively evisculate covalent leadership via compelling metrics. Efficiently customize maintainable value vis-a-vis pandemic.</p>
+                    <div className="post-preview-container col-md-9">
+                        <Route exact={true} path="/blog" component={BlogHome} />
+                        <Route  path="/blog/post/:id" render={({match}) => (
+                            <PostPage id={match.params.id}/>
+                        )} />
                     </div>
                     <div className="sidebar col-md-3">
 
@@ -67,6 +67,7 @@ export default class Blog extends React.Component {
                     Dynamically brand interdependent "outside the box" thinking after granular outsourcing. Synergistically engineer transparent content before ethical manufactured products.</p>
                     </div>
                 </div>
+
 
                 <Footer />
             </div>
