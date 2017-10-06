@@ -23,6 +23,8 @@ Version 1.1.0 - made portfolio more mobile friendly.
 
 Version 1.2.0 - added more projects.
 
+Version 2.0.0 - added blog page.
+
 ## Issues/Future Improvements
 
 Blog section of the website coming soon.

@@ -33,24 +33,131 @@
 
 .blog-content{
     padding-top: 60px;
+    color: #DFDFDF;
+}
+
+.sidebar{
+    padding-left: 30px;
 }
 
 #sidebar-img{
     max-width:100%;
     max-height:100%;
+    border-radius: 5px;
+    border: 5px solid #353435;
+    margin-bottom: 5px;
 }
 
+#blog-connect-icons img{
+    opacity: .8;
+    margin: 5px 0px;
+    margin-right: 15px;
+    cursor: pointer;
+    width: 35px;
+    height: auto;
+  }
+  
+  #blog-connect-icons img:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+/* PostPreview styles BEGIN */
 .post-preview-container{
     background: #353435;
     padding-top: 20px;
+    padding: 0;
+    margin-bottom: 40px;
+    border-radius: 3px;
 }
 
 .post-preview-item{
+    display: table;
     background: #131313;
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 18px 10px;
     border-radius: 3px;    
     -webkit-box-shadow: 0 10px 6px -6px black;
     -moz-box-shadow: 0 10px 6px -6px black;
          box-shadow: 0 10px 6px -6px black;
+}
+.left-side{
+    float: none;
+    display: table-cell;
+}
+.right-side{
+    float: none;
+    display: table-cell;
+}
+
+.post-preview-date{
+    font-size: 24px;
+    color: #E39DFF;
+    text-shadow: 0 2px 2px black;
+}
+.post-preview-tags{
+    color: #FFF3C1;
+    text-shadow: 0 2px 2px black;
+}
+.post-preview-title{
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 2px black;
+}
+.post-preview-excerpt{
+    text-shadow: 0 2px 2px black;
+}
+/* PostPreview styles END */
+
+.post-page-container{
+    padding: 25px;
+}
+.post-page-container h1{
+    color: #93F1FF;
+    margin-bottom: 10px;
+    margin-top: 0;
+    cursor: default;
+}
+.post-page-container h2,h3,h4,h5,h6{
+    color: #FFF3C1;
+    margin-bottom: 0px;
+    margin-top: 30px;
+}
+.post-page-container img{
+    margin: 15px 0px;
+    max-width:100%;
+    max-height:100%;
+}
+
+.post-page-container p,li{
+    font-size: 16px;
+}
+.post-page-container code,pre{
+    background: #222222;
+    color: #EBBCFF;
+    margin: 20px 0;
+}
+
+.post-page-container blockquote{
+    color: #F0E9D3;
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.post-footer p{
+    font-size: 14px;
+    color: #D6CBA1;
+    /* margin-top: 25px; */
+}
+
+.post-footer hr{
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+@media(max-width: 770px){
+    .post-preview-container{
+        padding: 1px 0;
+    }
 }

@@ -1,5 +1,4 @@
 var db = require("../models");
-var marked = require("marked");
 
 module.exports = function (app) {
     // GET all posts from the database
@@ -35,5 +34,29 @@ module.exports = function (app) {
         }).then(function (data) {
             res.json(data);
         });
+    });
+
+    // DELETE a post by it's id
+    app.delete('/api/post/:id', function (req, res) {
+        db.Post.destroy({ where: { id: req.params.id } });
+    });
+
+    // UPDATE a post by it's id
+    app.patch('/api/post/:id', function (req, res) {
+        db.Post.find({ where: { title: 'aProject' } })
+            .on('success', function (post) {
+                // Check if record exists in db
+                if (post) {
+                    post.updateAttributes({
+                        title: req.body.title,
+                        textMD: req.body.textMD,
+                        excerpt: req.body.excerpt,
+                        date: req.body.date,
+                        featured: req.body.featured,
+                        tags: req.body.tags
+                    })
+                        .success(function () { })
+                }
+            })
     });
 };

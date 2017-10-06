@@ -6,7 +6,6 @@
 .navbar-custom {
   margin-bottom: 0;
   top: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: black;
@@ -67,5 +66,7 @@
   padding: 0;
   padding-right: 20px;
   background: black;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  /* -webkit-box-shadow: 0 8px 8px -8px white;
+  -moz-box-shadow: 0 8px 8px -8px white; */
+  box-shadow: 0 3px 2px -2px #636363;
 }

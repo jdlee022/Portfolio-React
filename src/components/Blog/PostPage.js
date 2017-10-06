@@ -13,7 +13,7 @@ export default class PostPage extends React.Component {
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         API.getPostById(this.props.id).then((response) => {
             this.setState({
                 title: response.data.title,
@@ -21,12 +21,20 @@ export default class PostPage extends React.Component {
                 tags: response.data.tags,
                 textMD: response.data.textMD
             });
-        })
+        });
+        window.scrollTo(0, 0);
     }
 
     render() {
         return (
-            <Markdown>{this.state.textMD}</Markdown>
+            <div className="post-page-container">
+                <Markdown>{this.state.textMD}</Markdown>
+                <div className="post-footer">
+                    <hr />
+                    <p>Written by Jon Lee &bull; {this.state.date} &bull; {this.state.tags}</p>
+                </div>
+            </div>
+
         );
     }
 }

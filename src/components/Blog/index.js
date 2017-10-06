@@ -8,7 +8,7 @@
  * 
  */
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import BlogHome from './BlogHome';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
@@ -16,6 +16,9 @@ import PostPage from './PostPage';
 
 import './style.css';
 import me from '../utilities/img/me.png';
+import linkedinIcon from '../utilities/img/linkedin-icon.png';
+import githubIcon from '../utilities/img/github-icon.png';
+import rymIcon from '../utilities/img/rym-icon.png';
 
 export default class Blog extends React.Component {
     // Always scroll to the top when rendering a blog page
@@ -32,7 +35,7 @@ export default class Blog extends React.Component {
                     <div className="row">
                         <div className="col-md-12">
                             <h1 id="blog-header">Jon Lee</h1>
-                            <h4 id="blog-sub-header">Web development, the MERN stack, and more...</h4>
+                            <h4 id="blog-sub-header">Web Developer. Blockchain Enthusiast. Music Lover.</h4>
                         </div>
                     </div>
 
@@ -43,7 +46,7 @@ export default class Blog extends React.Component {
 
                     <div className="row">
                         <div className="col-md-12">
-                            <a href="/archive" id="archive-link">Archive</a>
+                            <Link to="/blog" id="archive-link" className="post-preview-title">Archive</Link>
                             <input type="text" className="form-control form-control-inline" id="archive-search" placeholder="Search" />
                         </div>
                     </div>
@@ -55,16 +58,21 @@ export default class Blog extends React.Component {
                 <div className="blog-content row">
                     <div className="post-preview-container col-md-9">
                         <Route exact={true} path="/blog" component={BlogHome} />
-                        <Route  path="/blog/post/:id" render={({match}) => (
-                            <PostPage id={match.params.id}/>
+                        <Route path="/blog/post/:id" render={({ match }) => (
+                            <PostPage id={match.params.id} />
                         )} />
                     </div>
                     <div className="sidebar col-md-3">
 
                         <img id="sidebar-img" src={me} alt="Jon Lee" />
-                        <p>Continually procrastinate inexpensive e-commerce with progressive methodologies. Dramatically expedite client-focused applications vis-a-vis next-generation ideas. Synergistically productivate unique growth strategies for effective content. Intrinsicly negotiate an expanded array of mindshare before client-centered manufactured products. Proactively build robust leadership whereas pandemic information.
-
-                    Dynamically brand interdependent "outside the box" thinking after granular outsourcing. Synergistically engineer transparent content before ethical manufactured products.</p>
+                        <div id="blog-connect-icons">
+                            <a href="https://www.linkedin.com/in/jon-lee/" target="__blank"><img src={linkedinIcon} alt="linkedin icon" /></a>
+                            <a href="https://github.com/jdlee022" target="__blank"><img src={githubIcon} alt="github icon" /></a>
+                            <a href="https://rateyourmusic.com/~jdlee022" target="__blank"><img src={rymIcon} alt="rym icon" /></a>
+                        </div>
+                        <p>I'm Jon Lee. I live in Seattle, WA. I'm a full stack JavaScript developer trained in the MERN stack. I've graduated from UC San Diego with a BS in applied mathematics, shipped my own iOS application to the App Store, and completed a full stack web development Bootcamp in July of 2017.<br /><br />
+                            I'm constantly experimenting with new technologies and working to hone my skills as a developer. This blog is meant to document my research, projects, and interests, including everything from  NodeJS tutorials to Blockchain think pieces to album of the year charts.
+                        </p>
                     </div>
                 </div>
 
