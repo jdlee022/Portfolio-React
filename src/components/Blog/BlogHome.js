@@ -7,13 +7,15 @@ export default class BlogHome extends React.Component {
         super(props);
         this.state = {
             posts: []
-        }
+        };
     }
 
     componentDidMount(){
         API.getAllPosts().then((response) => {
             this.setState({ posts: response.data });
-        })
+            console.log("response from GET", response);
+            console.log("state:", this.state);
+        });
     }
 
     render() {
