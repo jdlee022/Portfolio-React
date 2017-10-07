@@ -17,11 +17,10 @@ export default class BlogHome extends React.Component {
     }
 
     render() {
-        var postPreviewItems = this.state.posts.map((post, i) =>
-                <PostPreview data={post} key={i} />
-            );
+        // var postPreviewItems = this.state.posts.map((post, i) =>
+        //         <PostPreview data={post} key={i} />
+        //     );
 
-
-        return <div>{postPreviewItems}</div>;
+        return <div>poop</div>;
     }
 };
