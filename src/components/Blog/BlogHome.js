@@ -12,38 +12,22 @@ export default class BlogHome extends React.Component {
 
     componentDidMount() {
         API.getAllPosts().then((response) => {
-            if (response.data instanceof Array) {
-                this.setState({ posts: response.data });
-            }
-            else {
-                this.setState({
-                    posts: [
-                        {
-                            title: response.data.toString(),
-                            date: "test",
-                            tags: "test",
-                            excerpt: "test",
-                            textMD: "test"
-                        }
-                    ]
-                });
-            }
-            // it's something else
-
+            this.setState({ posts: response.data });
             console.log("response from GET", response);
             console.log("state:", this.state);
         });
     }
 
     render() {
-        if (!(this.state.posts instanceof Array)) {
-            API.getAllPosts().then((response) => {
-                this.setState({ posts: response.data });
-            });
+        var postPreviewItems;
+        if (this.state.posts instanceof Array) {
+            postPreviewItems = this.state.posts.map((post, i) =>
+                <PostPreview data={post} key={i} />
+            );
         }
-        var postPreviewItems = this.state.posts.map((post, i) =>
-            <PostPreview data={post} key={i} />
-        );
+        else {
+            postPreviewItems = this.state;
+        }
 
         return <div>{postPreviewItems}</div>;
     }
