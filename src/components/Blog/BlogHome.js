@@ -1,6 +1,7 @@
 import React from 'react';
 import API from '../utilities/routes/blogAPI';
 import PostPreview from './PostPreview';
+import $ from 'jquery';
 
 export default class BlogHome extends React.Component {
     constructor(props){
@@ -12,7 +13,26 @@ export default class BlogHome extends React.Component {
 
     componentDidMount(){
         API.getAllPosts().then((response) => {
-            this.setState({ posts: response.data });
+            if (typeof response.data === 'string' || response.data instanceof String){
+                this.setState({ posts: $.parseHTML(response.data) });
+            }
+            // it's a string
+            else if(response.data instanceof Array){
+                this.setState({ posts: response.data });
+            }
+            else{
+                this.setState({ posts:  [
+                    {
+                        title: "test",
+                        date: "test",
+                        tags: "test",
+                        excerpt: "test",
+                        textMD: "test"
+                    }
+                ]});
+            }
+            // it's something else
+            
             console.log("response from GET", response);
             console.log("state:", this.state);
         });
