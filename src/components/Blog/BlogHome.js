@@ -1,44 +1,46 @@
 import React from 'react';
 import API from '../utilities/routes/blogAPI';
 import PostPreview from './PostPreview';
-import $ from 'jquery';
 
 export default class BlogHome extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             posts: []
         };
     }
 
-    componentDidMount(){
+    componentDidMount() {
         API.getAllPosts().then((response) => {
-            if (typeof response.data === 'string' || response.data instanceof String){
-                this.setState({ posts: $.parseHTML(response.data) });
-            }
-            // it's a string
-            else if(response.data instanceof Array){
+            if (response.data instanceof Array) {
                 this.setState({ posts: response.data });
             }
-            else{
-                this.setState({ posts:  [
-                    {
-                        title: "test",
-                        date: "test",
-                        tags: "test",
-                        excerpt: "test",
-                        textMD: "test"
-                    }
-                ]});
+            else {
+                this.setState({
+                    posts: [
+                        {
+                            title: response.data.toString(),
+                            date: "test",
+                            tags: "test",
+                            excerpt: "test",
+                            textMD: "test"
+                        }
+                    ]
+                });
             }
             // it's something else
-            
+
             console.log("response from GET", response);
             console.log("state:", this.state);
         });
     }
 
     render() {
+        if (!(this.state.posts instanceof Array)) {
+            API.getAllPosts().then((response) => {
+                this.setState({ posts: response.data });
+            });
+        }
         var postPreviewItems = this.state.posts.map((post, i) =>
             <PostPreview data={post} key={i} />
         );
