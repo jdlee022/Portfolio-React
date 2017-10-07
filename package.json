@@ -7,7 +7,9 @@
     "babel-register": "^6.24.1",
     "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
+    "cookie-parser": "^1.4.3",
     "express": "^4.15.3",
+    "express-session": "^1.15.6",
     "jquery": "^3.2.1",
     "markdown-to-jsx": "^5.4.2",
     "mongoose": "^4.11.10",
@@ -28,7 +30,7 @@
   "scripts": {
     "start": "node server",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts start",
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:3001"

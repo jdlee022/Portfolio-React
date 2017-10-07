@@ -3,8 +3,9 @@
  */
 import React from 'react';
 import $ from 'jquery';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import ScrollEvent from 'react-onscroll';
+import { HashLink as Link } from 'react-router-hash-link';
 
 import "./style.css";
 
