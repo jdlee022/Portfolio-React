@@ -1,0 +1,28 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.16.2",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "markdown-to-jsx": "^5.4.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-onscroll": "^1.0.4",
+    "react-parallax": "^1.4.4",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-hash-link": "^1.1.1"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.14"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3001"
+}

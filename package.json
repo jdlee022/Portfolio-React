@@ -1,38 +1,21 @@
 {
-  "name": "portfolio-react",
-  "version": "0.1.0",
-  "private": true,
+  "name": "rando",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
   "dependencies": {
-    "axios": "^0.16.2",
     "babel-register": "^6.24.1",
     "body-parser": "^1.17.2",
-    "bootstrap": "^3.3.7",
     "cookie-parser": "^1.4.3",
     "express": "^4.15.3",
     "express-session": "^1.15.6",
-    "jquery": "^3.2.1",
-    "markdown-to-jsx": "^5.4.2",
-    "mongoose": "^4.11.10",
     "morgan": "^1.8.2",
     "mysql": "^2.13.0",
     "mysql2": "^1.4.2",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-onscroll": "^1.0.4",
-    "react-parallax": "^1.4.4",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-router-hash-link": "^1.1.1",
     "sequelize": "^4.11.0"
-  },
-  "devDependencies": {
-    "react-scripts": "1.0.10"
   },
   "scripts": {
     "start": "node server",
-    "build": "react-scripts build",
-    "test": "react-scripts start",
-    "eject": "react-scripts eject"
-  },
-  "proxy": "http://localhost:3001"
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"    
+  }
 }

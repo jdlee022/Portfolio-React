@@ -24,8 +24,8 @@ app.use(allowCrossDomain);
 // Setup logger
 app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] :response-time ms'));
 
-// Serve static assets
-app.use(express.static(path.resolve(__dirname, '..', 'build')));
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 //BodyParser Middleware
 app.use(bodyParser.json());
