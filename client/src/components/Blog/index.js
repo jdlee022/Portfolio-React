@@ -9,7 +9,7 @@
  */
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
-import BlogHome from './BlogHome';
+import Archive from './Archive';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import PostPage from './PostPage';
@@ -57,7 +57,7 @@ export default class Blog extends React.Component {
 
                 <div className="blog-content row">
                     <div className="post-preview-container col-md-9">
-                        <Route exact={true} path="/blog" component={BlogHome} />
+                        <Route exact={true} path="/blog" component={Archive} />
                         <Route path="/blog/post/:id" render={({ match }) => (
                             <PostPage id={match.params.id} />
                         )} />

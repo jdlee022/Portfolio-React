@@ -132,7 +132,7 @@
 .post-page-container p,li{
     font-size: 16px;
 }
-.post-page-container code,pre{
+.post-page-container code:not(.language-javascript),pre{
     background: #222222;
     color: #EBBCFF;
     margin: 20px 0;

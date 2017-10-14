@@ -2,7 +2,7 @@ import React from 'react';
 import API from '../utilities/routes/blogAPI';
 import PostPreview from './PostPreview';
 
-export default class BlogHome extends React.Component {
+export default class Archive extends React.Component {
     constructor(props) {
         super(props);
         this.state = {

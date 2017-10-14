@@ -1,5 +1,6 @@
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
+// import Markdown from 'react-markdown-syntax-highlight';
 import API from '../utilities/routes/blogAPI';
 
 export default class PostPage extends React.Component {
@@ -34,7 +35,6 @@ export default class PostPage extends React.Component {
                     <p>Written by Jon Lee &bull; {this.state.date} &bull; {this.state.tags}</p>
                 </div>
             </div>
-
         );
     }
 }
