@@ -10,6 +10,10 @@ Node
 
 Express
 
+MySQL
+
+Sequelize
+
 React
 
 Bootstrap

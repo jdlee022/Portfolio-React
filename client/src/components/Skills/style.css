@@ -46,6 +46,8 @@
 
 .bubble-desktop{
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bubble-mobile{

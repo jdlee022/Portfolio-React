@@ -44,28 +44,39 @@ export default class Navbar extends React.Component {
 
     /** Return the navbar to display if width greater than mobile */
     displayNav() {
+        // Generate the navbar links based on this component's state
+        var linkItems = this.state.links.map((link, index) => {
+            // The Blog link in the navbar will always route to /blog
+            if (link === "Blog") {
+                return <li key={index} className="link"><Link to="/blog">{link}</Link></li>;
+            }
+            // If we are on the blog "page" then we route to the id of the corresponding section on the main page
+            // The react-router-hash-link package lets us scroll straight to the section w/ id
+            if (window.location.pathname.includes("/blog")) {
+                var query = "/#" + link;
+                return <li key={index} className="link page-scroll"><Link to={query}>{link}</Link></li>;
+            }
+            // If we are already on main page then use the animated scroll function
+            else {
+                return <li key={index} className="link page-scroll"><a onClick={() => this.scrollToSection(link)}>{link}</a></li>;
+            }
+        });
         if (window.innerWidth > 770) {
-            // Generate the navbar links based on this component's state
-            var linkItems = this.state.links.map((link, index) => {
-                // The Blog link in the navbar will always route to /blog
-                if (link === "Blog") {
-                    return <li key={index} className="link"><Link to="/blog">{link}</Link></li>;
-                }
-                // If we are on the blog "page" then we route to the id of the corresponding section on the main page
-                // The react-router-hash-link package lets us scroll straight to the section w/ id
-                if (window.location.pathname.includes("/blog")) {
-                    var query = "/#" + link;
-                    return <li key={index} className="link page-scroll"><Link to={query}>{link}</Link></li>;
-                }
-                // If we are already on main page then use the animated scroll function
-                else {
-                    return <li key={index} className="link page-scroll"><a onClick={() => this.scrollToSection(link)}>{link}</a></li>;
-                }
-            });
+
 
             return <nav className="navbar navbar-custom top-nav-collapse navbar-fixed-top">
                 <div className="collapse navbar-collapse navbar-right navbar-main-collapse">
                     <ul className="nav navbar-nav">
+                        {linkItems}
+                    </ul>
+                </div>
+            </nav>;
+        }
+        // mobile nav
+        else {
+            return <nav className="mobile-nav">
+                <div className="mobile-nav-div">
+                    <ul className="mobile-nav-ul">
                         {linkItems}
                     </ul>
                 </div>
