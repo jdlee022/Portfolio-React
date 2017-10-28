@@ -114,13 +114,13 @@
 }
 .post-page-container h1{
     color: #93F1FF;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     margin-top: 0;
     cursor: default;
 }
 .post-page-container h2,h3,h4,h5,h6{
     color: #FFF3C1;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
     margin-top: 30px;
 }
 .post-page-container img{

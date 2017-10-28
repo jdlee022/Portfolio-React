@@ -71,7 +71,7 @@ export default class Blog extends React.Component {
                             <a href="https://rateyourmusic.com/~jdlee022" target="__blank"><img src={rymIcon} alt="rym icon" /></a>
                         </div>
                         <p>I'm Jon Lee. I live in Seattle, WA. I'm a full stack JavaScript developer trained in the MERN stack. I've graduated from UC San Diego with a BS in applied mathematics, shipped my own iOS application to the App Store, and completed a full stack web development Bootcamp in July of 2017.<br /><br />
-                            I'm constantly experimenting with new technologies and working to hone my skills as a developer. This blog is meant to document my research, projects, and interests, including everything from  NodeJS tutorials to Blockchain think pieces to album of the year charts.
+                            I'm constantly experimenting with new technologies and working to hone my skills as a developer. This blog is meant to document my research, projects, and interests, including everything from  JavaScript tutorials, to Blockchain think-pieces, to album of the year charts.
                         </p>
                     </div>
                 </div>
