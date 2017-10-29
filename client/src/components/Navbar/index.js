@@ -77,8 +77,6 @@ export default class Navbar extends React.Component {
             }
         });
         if (window.innerWidth > 770) {
-
-
             return <nav className="navbar navbar-custom top-nav-collapse navbar-fixed-top">
                 <div className="collapse navbar-collapse navbar-right navbar-main-collapse">
                     <ul className="nav navbar-nav">
@@ -92,7 +90,7 @@ export default class Navbar extends React.Component {
             return <nav className="mobile-nav navbar navbar-custom">
                 <div className="mobile-nav-div">
                     <ul className="mobile-nav-ul">
-                        {linkItems.reverse()}
+                        {linkItems}
                     </ul>
                 </div>
             </nav>;
