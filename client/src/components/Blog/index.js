@@ -26,6 +26,8 @@ export default class Blog extends React.Component {
         window.scrollTo(0, 0);
     }
 
+
+
     render() {
 
         return (
@@ -47,7 +49,7 @@ export default class Blog extends React.Component {
                     <div className="row">
                         <div className="col-md-12">
                             <Link to="/blog" id="archive-link" className="post-preview-title">Archive</Link>
-                            <input type="text" className="form-control form-control-inline" id="archive-search" placeholder="Search" />
+                            
                         </div>
                     </div>
                     <div className="row">
