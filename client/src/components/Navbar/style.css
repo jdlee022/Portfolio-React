@@ -85,6 +85,7 @@
     display: inline;
     float: right;
     margin-right: 20px;
+    font-size: 12px;
 }
 
 .mobile-nav-ul li a:hover {
