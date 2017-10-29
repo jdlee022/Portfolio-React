@@ -20,6 +20,21 @@ export default class Navbar extends React.Component {
         this.scrollToSection = this.scrollToSection.bind(this);
     }
 
+    /** Force the components to update when the window resizes.
+     * This is important when browser reaches mobile width.
+     */
+    handleResize = () => {
+        this.forceUpdate();
+    };
+
+    componentDidMount() {
+        window.addEventListener('resize', this.handleResize);
+    }
+    
+    componentWillUnmount(){
+        window.removeEventListener('resize', this.handleResize);
+    }
+
     /**
    * We use jQuery to scroll to an element by id
    * @param linkName - the id of the element we want to scroll to
@@ -33,7 +48,7 @@ export default class Navbar extends React.Component {
     /** Collapse the navbar when scrolling */
     handleScrollCallback() {
         // Do not apply for mobile
-        if (window.innerWidth > 770) {
+        if (window.innerWidth > 7) {
             if ($(".navbar").offset().top > 50) {
                 $(".navbar-fixed-top").addClass("top-nav-collapse");
             } else {
@@ -42,7 +57,7 @@ export default class Navbar extends React.Component {
         }
     }
 
-    /** Return the navbar to display if width greater than mobile */
+    /** Return the navbar to display based on view width */
     displayNav() {
         // Generate the navbar links based on this component's state
         var linkItems = this.state.links.map((link, index) => {
@@ -74,10 +89,10 @@ export default class Navbar extends React.Component {
         }
         // mobile nav
         else {
-            return <nav className="mobile-nav">
+            return <nav className="mobile-nav navbar navbar-custom">
                 <div className="mobile-nav-div">
                     <ul className="mobile-nav-ul">
-                        {linkItems}
+                        {linkItems.reverse()}
                     </ul>
                 </div>
             </nav>;

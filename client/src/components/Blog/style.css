@@ -38,6 +38,7 @@
 
 .sidebar{
     padding-left: 30px;
+    margin-bottom: 40px;
 }
 
 #sidebar-img{
@@ -91,11 +92,12 @@
 }
 
 .post-preview-date{
-    font-size: 24px;
+    font-size: 20px;
     color: #E39DFF;
     text-shadow: 0 2px 2px black;
 }
 .post-preview-tags{
+    font-size: 15px;
     color: #FFF3C1;
     text-shadow: 0 2px 2px black;
 }
@@ -106,6 +108,7 @@
 }
 .post-preview-excerpt{
     text-shadow: 0 2px 2px black;
+    margin: 10px 0;
 }
 /* PostPreview styles END */
 
@@ -159,5 +162,21 @@
 @media(max-width: 770px){
     .post-preview-container{
         padding: 1px 0;
+    }
+
+    .post-preview-title{
+        font-size: 25px;
+    }
+
+    .post-preview-date{
+        font-size: 20px;
+    }
+
+    .post-preview-tags{
+        font-size: 15px;
+    }
+    
+    .post-preview-excerpt{
+        margin: 10px 0;
     }
 }
