@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    BrowserRouter,
+    HashRouter,
     Route,
     Switch
 } from 'react-router-dom';
@@ -15,13 +15,13 @@ import DatabaseGUI from './components/DatabaseGUI';
 import NotFound from './components/NotFound';
 
 export default () => (
-    <BrowserRouter>
+    <HashRouter>
         <Switch>
             <Route path="/" exact render={props => <Main {...props} />} />
             <Route path="/blog" render={props => <Blog {...props} />} />
             <Route path="/api/gui" exact render={props => <DatabaseGUI {...props} />} />
             <Route path="*" render={props => <NotFound {...props} />} />
         </Switch>
-    </BrowserRouter>
+    </HashRouter>
 );
 

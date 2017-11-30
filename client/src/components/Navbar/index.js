@@ -67,7 +67,7 @@ export default class Navbar extends React.Component {
             }
             // If we are on the blog "page" then we route to the id of the corresponding section on the main page
             // The react-router-hash-link package lets us scroll straight to the section w/ id
-            if (window.location.pathname.includes("/blog")) {
+            if (window.location.hash.includes("/blog")) {
                 var query = "/#" + link;
                 return <li key={index} className="link page-scroll"><Link to={query}>{link}</Link></li>;
             }
