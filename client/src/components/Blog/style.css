@@ -159,7 +159,7 @@
     margin-top: 25px;
 }
 
-@media(max-width: 770px){
+@media(max-width: 995px){
     .post-preview-container{
         padding: 1px 0;
     }
@@ -169,7 +169,7 @@
     }
 
     .post-preview-date{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .post-preview-tags{
