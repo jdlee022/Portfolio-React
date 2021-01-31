@@ -5,8 +5,6 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
 
-import Recommendation from '../Recommendation';
-
 import './style.css';
 import philScreenshot from '../utilities/img/phil-screenshot.png';
 import philBackground from '../utilities/img/phil-background.jpg';
@@ -20,8 +18,6 @@ import fourWallsScreenshot from '../utilities/img/four-walls-screenshot.png';
 import fourWallsBackground from '../utilities/img/four-walls-background.png';
 import gradScreenshot from '../utilities/img/grad-screenshot.png';
 import gradBackground from '../utilities/img/grad-background.png';
-import felipe from '../utilities/img/felipe.png';
-import stacey from '../utilities/img/stacey.png';
 
 export default class Projects extends React.Component {
 
@@ -33,8 +29,6 @@ export default class Projects extends React.Component {
             <h1 id="projects-title">Projects</h1>
             <p id="projects-subtitle">
               Check out my code on <a href="https://github.com/jdlee022" target="__blank">GitHub</a>.
-              <br />
-              Note that some project links can take up to 10 seconds for the initial launch due to Heroku deployment.
             </p>
           </div>
         </div>
@@ -42,16 +36,17 @@ export default class Projects extends React.Component {
         <Parallax bgImage={philBackground} strength={400}>
           <div className="row">
             <div className="col-md-6 project-text">
-              <h1 ><a id="phil-title" href="http://phil9000.herokuapp.com/" target="__blank">Phil</a></h1>
+              <h1 ><a id="phil-title" href="https://phil-9000.herokuapp.com/" target="__blank">Phil</a></h1>
               <p>
                 Phil is a philosophy discussion forum built as a responsive single page web app with the MERN stack. The project was completed in 3 weeks with a team of 4 developers in an intensive coding Bootcamp. I personally designed wireframes, implemented user login, built a relational database, and provided a RESTful API for the scalable front-end to dynamically generate a reusable UI via AJAX. In essence, I built the Home and Discuss pages of the website.
             </p>
               <br />
               <p>Technologies used: Node, Express, MongoDB, React, Bootstrap</p>
-              <a href="https://github.com/jdlee022/Phil" target="__blank"><p>Source code</p></a>
+              <a className="project_link" href="https://phil-9000.herokuapp.com/" target="__blank"><p>View Project</p></a>
+              <a className="project_link" href="https://github.com/jdlee022/Phil" target="__blank"><p>Source code</p></a>
             </div>
             <div className="col-md-6 text-center">
-              <a href="http://phil9000.herokuapp.com/" target="__blank"><img className="project-screenshot" src={philScreenshot} alt="phil screenshot" /></a>
+              <a href="https://phil-9000.herokuapp.com/" target="__blank"><img className="project-screenshot" src={philScreenshot} alt="phil screenshot" /></a>
             </div>
           </div>
         </Parallax>
@@ -68,7 +63,8 @@ export default class Projects extends React.Component {
             </p>
               <br />
               <p>Technologies used: Node, Express, MySQL, Amazon Web Services S3, Web Audio API, Bootstrap</p>
-              <a className="pink-link" href="https://github.com/jdlee022/Synth-Lord" target="__blank"><p>Source code</p></a>
+              <a className="project_link pink-link" href="https://synthlord.herokuapp.com/" target="__blank"><p>View Project</p></a>
+              <a className="project_link pink-link" href="https://github.com/jdlee022/Synth-Lord" target="__blank"><p>Source code</p></a>
             </div>
             <div className="col-md-6 text-center">
               <a href="https://synthlord.herokuapp.com/" target="__blank"><img className="project-screenshot" src={synthLordScreenshot} alt="synth lord screenshot" /></a>
@@ -79,7 +75,7 @@ export default class Projects extends React.Component {
         <Parallax bgImage={scaleGeniusBackground} strength={400}>
           <div className="row">
             <div className="col-md-6 project-text">
-              <h1 ><a className="yellow-link" href="https://itunes.apple.com/us/app/scalegenius-scales-for-alternate-guitar-tunings/id1141755821?mt=8" target="__blank">ScaleGenius</a></h1>
+              <h1 ><a className="yellow-link" href="https://github.com/jdlee022/ScaleGenius" target="__blank">ScaleGenius</a></h1>
               <p>
                 ScaleGenius is an easy-to-use reference guide for guitar players who like to experiment and practice with alternate tunings. This mobile app was developed in an 8-week iOS Bootcamp in which I learned the Swift programming language from scratch and built my own app which can be found on the iOS App Store by searching <a className="yellow-link" href="https://itunes.apple.com/us/app/scalegenius-scales-for-alternate-guitar-tunings/id1141755821?mt=8" target="__blank">"ScaleGenius"</a>.
             </p>
@@ -88,7 +84,7 @@ export default class Projects extends React.Component {
               <a className="yellow-link" href="https://github.com/jdlee022/ScaleGenius" target="__blank"><p>Source code</p></a>
             </div>
             <div className="col-md-6 text-center">
-              <a href="https://itunes.apple.com/us/app/scalegenius-scales-for-alternate-guitar-tunings/id1141755821?mt=8" target="__blank"><img className="project-screenshot" src={scaleGeniusScreenshot} alt="scalegenius screenshot" /></a>
+              <a href="https://github.com/jdlee022/ScaleGenius" target="__blank"><img className="project-screenshot" src={scaleGeniusScreenshot} alt="scalegenius screenshot" /></a>
             </div>
           </div>
         </Parallax>
@@ -113,21 +109,21 @@ export default class Projects extends React.Component {
         </Parallax>
 
         <Parallax bgImage={gradBackground} strength={400}>
-        <div className="row">
-          <div className="col-md-6 project-text">
-            <h1 ><a className="pink-link" href="https://github.com/jdlee022/GRAD" target="__blank">GRAD</a></h1>
-            <p>
-            GRAD is a web app for UC San Diego students to map out prerequisites for advanced courses in graph format. This group project was developed in a software development course at the UC San Diego. Throughout the class, I practiced agile methodologies and contributed to artifacts including user stories, use cases, database schemas, and screen sequence diagrams.
+          <div className="row">
+            <div className="col-md-6 project-text">
+              <h1 ><a className="pink-link" href="https://github.com/jdlee022/GRAD" target="__blank">GRAD</a></h1>
+              <p>
+                GRAD is a web app for UC San Diego students to map out prerequisites for advanced courses in graph format. This group project was developed in a software development course at the UC San Diego. Throughout the class, I practiced agile methodologies and contributed to artifacts including user stories, use cases, database schemas, and screen sequence diagrams.
         </p>
-            <br />
-            <p>Technologies used: Agile Methodology, Node, Bootstrap</p>
-            <a className="pink-link" href="https://github.com/jdlee022/GRAD" target="__blank"><p>Source code</p></a>
+              <br />
+              <p>Technologies used: Agile Methodology, Node, Bootstrap</p>
+              <a className="pink-link" href="https://github.com/jdlee022/GRAD" target="__blank"><p>Source code</p></a>
+            </div>
+            <div className="col-md-6 text-center">
+              <a href="https://github.com/jdlee022/GRAD" target="__blank"><img className="project-screenshot" src={gradScreenshot} alt="grad screenshot" /></a>
+            </div>
           </div>
-          <div className="col-md-6 text-center">
-            <a href="https://github.com/jdlee022/GRAD" target="__blank"><img className="project-screenshot" src={gradScreenshot} alt="grad screenshot" /></a>
-          </div>
-        </div>
-      </Parallax>
+        </Parallax>
 
         <Parallax bgImage={fourWallsBackground} strength={400}>
           <div className="row">
@@ -145,18 +141,6 @@ export default class Projects extends React.Component {
             </div>
           </div>
         </Parallax>
-
-        <div className="row rec-row">
-        <div className="col-md-6 rec-left">
-        <Recommendation className="recommendation" recQuote="&quot;As one of the top students in the class, Jon demonstrated a firm grasp of programming principles as well as the ability to learn on his own, given a set of tools and a place to start from.&quot;" recImg={felipe} />
-        </div>
-        <div className="col-md-6 rec-right">
-        <Recommendation className="recommendation"  recQuote="&quot;Jon has a true talent in problem solving and mastering challenging material quickly. He will not disappoint in his technical skills nor his ability to work collaboratively within a team.&quot;" recImg={stacey} />
-        </div>
-        </div>
-        
-        
-      
       </div>
     )
   }

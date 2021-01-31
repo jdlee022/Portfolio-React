@@ -27,6 +27,10 @@ app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:htt
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, '../client/build')));
 
+// serve resume
+app.use('/resume', express.static(__dirname + '/static/JonLeeResume.pdf'));
+app.use(express.static(__dirname + '/static'));
+
 //BodyParser Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

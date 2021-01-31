@@ -1,13 +1,44 @@
+#landing_pg_overlay{
+  position: absolute;
+  color: #fff;
+  left: 0;
+  right: 0;
+  top: 50px;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px black;
+}
+
+#landing_pg_title, #landing_pg_name{
+  font-size: 30px;
+  text-shadow: 2px 2px 2px black;
+  margin: 0 15px;
+}
+
+#landing_pg_name{
+  margin: 5px 0;
+}
+
+.landing_pg_link{
+  margin: 5px 10px;
+  font-size: 18px;
+}
+
 #learnBtn{
   position: absolute;
   bottom: 20px;
   margin: 0 auto;
   left: 0;
   right: 0;
-  font-size: 13px;
+  font-size: 18px;
   text-shadow: 2px 2px 2px black;
+  color: #fff;
 }
 
-#learnBtn:hover{
+#learnBtn span:hover{
   cursor: pointer;
+  color: #93F1FF;
 }

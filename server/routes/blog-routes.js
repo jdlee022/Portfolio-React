@@ -38,25 +38,17 @@ module.exports = function (app) {
 
     // DELETE a post by it's id
     app.delete('/api/post/:id', function (req, res) {
-        db.Post.destroy({ where: { id: req.params.id } });
+        db.Post.destroy({ where: { id: req.params.id } }).then(function (data) {
+            res.json(data);
+        });;
     });
 
     // UPDATE a post by it's id
     app.patch('/api/post/:id', function (req, res) {
-        db.Post.find({ where: { title: 'aProject' } })
-            .on('success', function (post) {
-                // Check if record exists in db
-                if (post) {
-                    post.updateAttributes({
-                        title: req.body.title,
-                        textMD: req.body.textMD,
-                        excerpt: req.body.excerpt,
-                        date: req.body.date,
-                        featured: req.body.featured,
-                        tags: req.body.tags
-                    })
-                        .success(function () { })
-                }
-            })
+        db.Post.findOne({ where: { id: req.params.id } }).then(function (data) {
+            // TODO:
+
+            res.json(data)
+        });
     });
 };
