@@ -9,9 +9,8 @@
 }
 
 #about-text{
-  margin: 25px;
-  margin-right: 40px;
-  text-align: left;
+  line-height: 1.5;
+  font-size: 18px;
 }
 
 .about-pic{
@@ -25,13 +24,19 @@
   max-height: 445px;
 }
 
-
-@media (min-width: 1370px){ 
-  #about-text{
-    line-height: 1.5;
-    font-size: 18px;
-  }
+.dark-yellow-link{
+  color: #ffda38;
 }
+
+.dark-yellow-link:hover{
+  color: #ffe46e;
+}
+
+.about-container .col-md-6{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 
 /* mobile */
 @media (max-width: 770px){
@@ -39,9 +44,13 @@
     margin-top: 35px;
   }
 
-  #about-text{
+  /* #about-text{
     margin-left: 25px;
     margin-right: 25px;
     text-align: center;
+  } */
+  .about-container .col-md-6{
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }

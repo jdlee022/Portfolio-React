@@ -13,7 +13,7 @@ export default class Navbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            links: ["Home", "About", "Projects", "Connect", "Blog"]
+            links: ["Home", "Connect", "Resume", "Blog"]
         }
         this.displayNav = this.displayNav.bind(this);
         this.handleScrollCallback = this.handleScrollCallback.bind(this);
@@ -65,6 +65,9 @@ export default class Navbar extends React.Component {
             if (link === "Blog") {
                 return <li key={index} className="link"><Link to="/blog">{link}</Link></li>;
             }
+            if (link === "Resume") {
+                return <li key={index} className="link"><a href="/resume">{link}</a></li>;
+            }
             // If we are on the blog "page" then we route to the id of the corresponding section on the main page
             // The react-router-hash-link package lets us scroll straight to the section w/ id
             if (window.location.hash.includes("/blog")) {
@@ -78,6 +81,12 @@ export default class Navbar extends React.Component {
         });
         if (window.innerWidth > 770) {
             return <nav className="navbar navbar-custom top-nav-collapse navbar-fixed-top">
+                {/* <div className="collapse navbar-collapse navbar-left navbar-main-collapse">
+                    
+                    <ul className={`header_left nav navbar-nav`}>
+                        <li className="link"><a target="_blank" href="https://www.linkedin.com/in/jon-lee/">JON LEE</a></li>
+                    </ul>
+                </div> */}
                 <div className="collapse navbar-collapse navbar-right navbar-main-collapse">
                     <ul className="nav navbar-nav">
                         {linkItems}

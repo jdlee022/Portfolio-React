@@ -70,10 +70,9 @@ export default class Blog extends React.Component {
                         <div id="blog-connect-icons">
                             <a href="https://www.linkedin.com/in/jon-lee/" target="__blank"><img src={linkedinIcon} alt="linkedin icon" /></a>
                             <a href="https://github.com/jdlee022" target="__blank"><img src={githubIcon} alt="github icon" /></a>
-                            <a href="https://rateyourmusic.com/~jdlee022" target="__blank"><img src={rymIcon} alt="rym icon" /></a>
+                            {/* <a href="https://rateyourmusic.com/~jdlee022" target="__blank"><img src={rymIcon} alt="rym icon" /></a> */}
                         </div>
-                        <p>I'm Jon Lee. I live in Seattle, WA. I'm a full stack JavaScript developer trained in the MERN stack. I've graduated from UC San Diego with a BS in applied mathematics, shipped my own iOS application to the App Store, and completed a full stack web development Bootcamp in July of 2017.<br /><br />
-                            I'm constantly experimenting with new technologies and working to hone my skills as a developer. This blog is meant to document my research, projects, and interests, including everything from  JavaScript tutorials, to Blockchain think-pieces, to album of the year charts.
+                        <p>I'm Jon Lee. I live in Seattle, WA. I'm a full stack JavaScript developer trained in the MERN stack. I've graduated from UC San Diego with a BS in applied mathematics, shipped my own iOS application to the App Store, and completed a full stack web development Bootcamp in July of 2017. Since then I've been doing web app development for <a target="_blank" href="https://oneclick.ai/home">OneClick.ai</a>, an AI demand forecasting platform.
                         </p>
                     </div>
                 </div>

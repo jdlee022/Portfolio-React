@@ -1,0 +1,41 @@
+.experience-container p{
+  font-size: 18px;
+  text-shadow: 0 2px 2px black;
+}
+
+.experience-container h1{
+}
+
+.experience-date{
+  margin-bottom: 5px;
+  color: #C9C9C9;
+}
+
+.experience-header{
+  padding-bottom: 0px;
+}
+
+#experience-title{
+  margin-top: 60px;
+  margin-bottom: 25px;
+}
+
+#experience-subtitle{
+  line-height: 25px;
+  font-size: 18px;
+  color: #FFF5CA;
+}
+
+
+
+/* mobile */
+@media (min-width: 770px){
+  .experience-img {
+    padding-right: 5%;
+  }
+  .experience-screenshot{
+    width: 100%;
+    max-width: 800px;
+    padding-top: 60px;
+  }
+}

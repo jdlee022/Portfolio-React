@@ -39,7 +39,7 @@ export default class Skills extends React.Component {
                         <img src={developmentLogo} alt="development logo" />
                         <br />
                         <h4>Development</h4>
-                        <p>I program full stack applications from the ground up, typically employing Node, Express, MongoDB, React, and Bootstrap. I also love learning new technologies whenever they happen to be a good fit for the project I’m working on.</p>
+                        <p>I program full stack applications from the ground up, and have experience with React, jQuery, Node, Express, Django, MongoDB, and MySQL. I also love learning new technologies when they're a good fit for the project I’m working on.</p>
                     </div>
                     <div className="col-md-3 text-center">
                         <img src={teamworkLogo} alt="teamwork logo" />

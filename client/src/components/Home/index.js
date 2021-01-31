@@ -135,25 +135,25 @@ export default class Home extends React.Component {
                 circleArr[i].update();
             }
 
-            // Draw text in center of canvas
-            c.fillStyle = "#eaeaea";
-            c.font = "bold 28px 'Helvetica'";
-            var textString = "Hi, I'm Jon. I design and build web applications from scratch.",
-                textWidth = c.measureText(textString).width;
-            // Draw different text for mobile width
-            if (canvas.width < 800) {
-                c.font = "bold 15px 'Helvetica'";
-                textString = "Hi, I'm Jon. I design and build web applications.";
-                textWidth = c.measureText(textString).width;
-            }
-            c.save();
-            c.translate((canvas.width / 2) - (textWidth / 2), canvas.height / 2);
-            c.shadowColor = "black";
-            c.shadowOffsetX = 0;
-            c.shadowOffsetY = 0;
-            c.shadowBlur = 10;
-            c.fillText(textString, 0, 0);
-            c.restore();
+            // // Draw text in center of canvas
+            // c.fillStyle = "#eaeaea";
+            // c.font = "bold 28px 'Helvetica'";
+            // var textString = "Hi, I'm Jon. I design and build web applications from scratch.",
+            //     textWidth = c.measureText(textString).width;
+            // // Draw different text for mobile width
+            // if (canvas.width < 800) {
+            //     c.font = "bold 15px 'Helvetica'";
+            //     textString = "Hi, I'm Jon. I design and build web applications.";
+            //     textWidth = c.measureText(textString).width;
+            // }
+            // c.save();
+            // c.translate((canvas.width / 2) - (textWidth / 2), canvas.height / 2);
+            // c.shadowColor = "black";
+            // c.shadowOffsetX = 0;
+            // c.shadowOffsetY = 0;
+            // c.shadowBlur = 10;
+            // c.fillText(textString, 0, 0);
+            // c.restore();
         }
 
         init();
@@ -163,12 +163,22 @@ export default class Home extends React.Component {
     render() {
         return (
             <div className="text-center">
+                <div id="landing_pg_overlay">
+                    <div>
+                        <div id="landing_pg_title">Full Stack Web Developer</div>
+                    <div id="landing_pg_name">Jon Lee</div>
+                    <div><span>
+                        <a className="landing_pg_link link_1" target="_blank" href="https://github.com/jdlee022">Github</a>
+                        <a className="landing_pg_link link_2 yellow-link" target="_blank" href="https://www.linkedin.com/in/jon-lee/">LinkedIn</a>
+                        <a className="landing_pg_link link_3 pink-link" target="_blank" href="/resume">Resume</a>
+                    </span></div></div>
+                </div>
                 <canvas ref="myCanvas" />
                 <div id="learnBtn">
-                    <a onClick={() => this.scrollToSection("Skills")}>
+                    <span onClick={() => this.scrollToSection("Skills")}>
                         Learn more<br />
                         <i className="glyphicon glyphicon-chevron-down"></i>
-                    </a>
+                    </span>
                 </div>
             </div>
         );
