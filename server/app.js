@@ -28,7 +28,7 @@ app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:htt
 app.use(express.static(path.join(__dirname, '../client/build')));
 
 // serve resume
-app.use('/resume', express.static(__dirname + '/static/Jon_Lee_Resume.docx'));
+app.use('/resume', express.static(__dirname + '/static/Jon_Lee_Resume.pdf'));
 app.use(express.static(__dirname + '/static'));
 
 //BodyParser Middleware
