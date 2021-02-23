@@ -170,7 +170,7 @@ export default class Home extends React.Component {
                     <div><span>
                         <a className="landing_pg_link link_1" target="_blank" href="https://github.com/jdlee022">Github</a>
                         <a className="landing_pg_link link_2 yellow-link" target="_blank" href="https://www.linkedin.com/in/jon-lee/">LinkedIn</a>
-                        <a className="landing_pg_link link_3 pink-link" target="_blank" href="/resume">Resume</a>
+                        <a className="landing_pg_link link_3 pink-link" target="_blank" href="https://drive.google.com/file/d/1IlFHD56jEUW5ZrDqOPWJ5WsKrJ28-2f8/view?usp=sharing">Resume</a>
                     </span></div></div>
                 </div>
                 <canvas ref="myCanvas" />
