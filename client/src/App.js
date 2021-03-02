@@ -13,11 +13,13 @@ import Main from './components/Main';
 import Blog from './components/Blog';
 import DatabaseGUI from './components/DatabaseGUI';
 import NotFound from './components/NotFound';
+import IFrameTest from './components/IFrameTest';
 
 export default () => (
     <HashRouter>
         <Switch>
-            <Route path="/" exact render={props => <Main {...props} />} />
+            <Route path="/iframe_test" render={props => <IFrameTest {...props} />} />
+            <Route path="/" exact render={props => <IFrameTest {...props} />} />
             <Route path="/blog" render={props => <Blog {...props} />} />
             <Route path="/api/gui" exact render={props => <DatabaseGUI {...props} />} />
             <Route path="*" render={props => <NotFound {...props} />} />
