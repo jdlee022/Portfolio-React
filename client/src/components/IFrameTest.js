@@ -7,7 +7,7 @@ export default class IFrameTest extends React.Component {
     render() {
         return (
             <div className="text-center"style={{width: '100%', height: '100%', minHeight: '660px'}}>
-                <iframe sandbox="allow-same-origin" style={{width: '100%', height: '100%', minHeight: '660px'}} src="https://us.oneclick.ai/en/login" title="iframe test"></iframe>
+                <iframe sandbox="allow-same-origin allow-modals allow-forms allow-scripts allow-popups" style={{width: '100%', height: '100%', minHeight: '660px'}} src="https://us.oneclick.ai/en/login" title="iframe test"></iframe>
             </div>
         );
     }
