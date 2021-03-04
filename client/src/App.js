@@ -17,7 +17,7 @@ import NotFound from './components/NotFound';
 export default () => (
     <HashRouter>
         <Switch>
-            <Route path="/" exact render={props => <IFrameTest {...props} />} />
+            <Route path="/" exact render={props => <Main {...props} />} />
             <Route path="/blog" render={props => <Blog {...props} />} />
             <Route path="/api/gui" exact render={props => <DatabaseGUI {...props} />} />
             <Route path="*" render={props => <NotFound {...props} />} />
